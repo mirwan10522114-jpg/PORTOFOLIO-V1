@@ -4,7 +4,7 @@
 
 [![Full-Stack Web Dev](https://img.shields.io/badge/Full--Stack%20Web%20Dev-Laravel%20%7C%20React%20%7C%20Next.js-f59e0b?style=for-the-badge&logo=laravel&logoColor=white)](https://github.com/mirwan10522114-jpg)
 [![BNSP Certified Data Analyst](https://img.shields.io/badge/BNSP%20Certified-Data%20Analyst%20(SKKNI)-10b981?style=for-the-badge&logo=checkmarx&logoColor=white)](https://lspinformatika.id)
-[![UNIKOM Alumni](https://img.shields.io/badge/Degree-S.SI%20(GPA%203.68)-06b6d4?style=for-the-badge&logo=academia&logoColor=white)](https://unikom.ac.id)
+[![UNIKOM Alumni](https://img.shields.io/badge/Degree-S.Kom.%20(GPA%203.68)-06b6d4?style=for-the-badge&logo=academia&logoColor=white)](https://unikom.ac.id)
 [![Cisco Certified](https://img.shields.io/badge/Cisco-CCNA%20(2x%20Verified)-1ba0d7?style=for-the-badge&logo=cisco&logoColor=white)](https://netacad.com)
 [![GitHub](https://img.shields.io/badge/GitHub-mirwan10522114--jpg-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mirwan10522114-jpg)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mirwan--kholid-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mirwan-kholid-902038362/)
@@ -30,7 +30,7 @@
 
 ## 📌 Executive Summary
 
-Modern, high-performance personal portfolio website showcasing the engineering work, enterprise web systems, academic distinctions, and accredited credentials of **Mirwan Kholid, S.SI** — an Information Systems graduate from **Universitas Komputer Indonesia (UNIKOM)** (GPA: **3.68 / 4.00**).
+Modern, high-performance personal portfolio website showcasing the engineering work, enterprise web systems, academic distinctions, and accredited credentials of **Mirwan Kholid, S.Kom.** — an Information Systems graduate from **Universitas Komputer Indonesia (UNIKOM)** (GPA: **3.68 / 4.00**).
 
 The portfolio highlights Mirwan's dual primary competencies:
 1. **Full-Stack Web Development**: Building scalable, resilient, and responsive web platforms with Laravel, Next.js, React, PHP, and MySQL.
@@ -42,7 +42,7 @@ The website features deep architectural breakdowns of **6 enterprise and governm
 
 ## 👨‍💻 About Mirwan Kholid
 
-- **Degree**: Bachelor of Information Systems (*Sarjana Sistem Informasi - S.SI*), Universitas Komputer Indonesia (UNIKOM)
+- **Degree**: Bachelor of Information Systems (*Sarjana Sistem Informasi - S.Kom.*), Universitas Komputer Indonesia (UNIKOM)
 - **Academic Standing**: Cumulative GPA **3.68 / 4.00** (*High Distinction*)
 - **Core Pillars**:
   - 🌐 **Full-Stack Web Development**: Laravel, PHP, Next.js, React, JavaScript (ES6+), TypeScript, RESTful API integrations, Tailwind CSS, HTML5/CSS3.
@@ -192,6 +192,7 @@ PORTOFOLIO/
 │       ├── logo-banksampah.png            # Bank Sampah Sukamaju Sejahtera insignia
 │       ├── logo-disdikkbb.png             # Dinas Pendidikan Kab. Bandung Barat crest
 │       ├── logo-himasi.png                # Himpunan Mahasiswa Sistem Informasi UNIKOM emblem
+│       ├── logo-sapma.png                 # SAPMA PP Komisariat UNIKOM emblem
 │       ├── project-wastebank.png          # Waste Bank platform preview screenshot
 │       ├── project-petadik.png            # PETADIK Disdik KBB UI preview screenshot
 │       ├── project-kipan.png              # SIM KIPAN member portal preview
@@ -249,5 +250,5 @@ If you would like to discuss full-time opportunities, engineering projects, or c
 ---
 
 <div align="center">
-  <sub>Designed & Developed by <strong>Mirwan Kholid, S.SI</strong> • Crafted with precision, performance, and attention to detail.</sub>
+  <sub>Designed & Developed by <strong>Mirwan Kholid, S.Kom.</strong> • Crafted with precision, performance, and attention to detail.</sub>
 </div>
