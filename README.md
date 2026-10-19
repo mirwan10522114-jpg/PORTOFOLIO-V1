@@ -93,7 +93,7 @@ The website features deep architectural breakdowns of **8 enterprise, mobile, an
 | **05** | **WebGIS Kedai Kopi Bandung** | Multi-Criteria Strategic Location Analysis | Next.js, TypeScript, Leaflet.js, OpenStreetMap | [Repository](https://github.com/mirwan10522114-jpg/WebGIS_Analisis-Lokasi-Strategis-Cabang-Kedai-Kopi) |
 | **06** | **SIPUS — Perpustakaan Digital Sekolah** | Digital Library & QR Circulation Desk | React, Vite, TypeScript, Node.js, Express, MySQL | [Repository](https://github.com/mirwan10522114-jpg/SIPUS_WEB_PERPUSTAKAAN) |
 | **07** | **Sistem Absensi Karyawan** | Employee Attendance & Geofencing System | React, TypeScript, Vite, Tailwind CSS, Node.js, Express, MySQL | [Repository](https://github.com/mirwan10522114-jpg/SIS-TEM_ABSENSI_KARYAWAN) |
-| **08** | **Aplikasi Rental Mobil** | Car Rental & Mobile Booking Platform | JavaScript, HTML5, CSS3, Google Apps Script, REST API | [Mobile Web App](#) |
+| **08** | **Aplikasi Rental Mobil** | Car Rental & Mobile Booking Platform | Google Apps Script, Google Sheets, JavaScript, HTML5/CSS3 | [Live Web App](https://script.google.com/macros/s/AKfycbyIvFluy0DLAlZeAJa4AOdrDlnrknuQOV8maKFKhzE4z8ijkVWBNMqs63_3c1DL7oEh_A/exec) |
 
 ---
 
@@ -144,15 +144,17 @@ The website features deep architectural breakdowns of **8 enterprise, mobile, an
 
 #### 8. Aplikasi Rental Mobil — Car Rental & Fleet Booking Service
 - **Problem & Context**: Traditional car rental services often struggle with manual phone bookings, fragmented schedule tracking, lack of instant vehicle availability visibility, and cumbersome proof-of-payment verification.
-- **Technical Solution & Implementation**: Developed a lightweight, mobile-first Car Rental Service web application designed for on-the-go customer bookings. The platform delivers instant fleet catalog exploration, dynamic date and duration-based pricing calculation, and direct customer reservation workflows with automated booking record dispatch.
+- **Technical Solution & Implementation**: Developed a lightweight, mobile-first Car Rental Service web application deployed via Google Apps Script with a structured Google Sheets relational database. The platform delivers instant fleet catalog exploration, dynamic date and duration-based pricing calculation, and direct customer reservation workflows with automated booking record dispatch.
 - **Key Features & Impact**:
   - Mobile-optimized responsive booking interface designed for seamless smartphone experience.
   - Interactive fleet catalog showcasing car models, transmission types, seat capacity, and daily rates.
   - Dynamic rental duration and price calculation with real-time tariff updates.
   - Digital customer reservation form capturing pickup date, return schedule, and customer credentials.
+  - Real-time cloud database synchronization connected directly to a Google Sheets backend.
   - Automated booking dispatch and status tracking connecting customers with rental administration.
-  - Centralized records that eliminate manual double-booking errors and accelerate reservation turnaround.
-- **Technologies & Tools**: JavaScript (ES6+) · HTML5 · CSS3 · Mobile Web App · Google Apps Script · REST API · Cloud Database
+  - Standalone cloud deployment via Google Apps Script eliminating separate hosting costs.
+- **Technologies & Tools**: Google Apps Script · Google Sheets (Database) · JavaScript (ES6+) · HTML5 · CSS3 · Mobile Web App · Cloud Deployment
+- **Live Deployment**: [script.google.com Live Web App](https://script.google.com/macros/s/AKfycbyIvFluy0DLAlZeAJa4AOdrDlnrknuQOV8maKFKhzE4z8ijkVWBNMqs63_3c1DL7oEh_A/exec)
 
 ---
 

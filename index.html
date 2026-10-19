@@ -2290,11 +2290,11 @@
             Mobile-first car rental service web application facilitating online vehicle fleet browsing, rental scheduling, automated tariff calculation, and digital booking verification.
           </p>
           <div class="flex flex-wrap gap-2 mb-6">
+            <span class="tag">Google Apps Script</span>
+            <span class="tag">Google Sheets (DB)</span>
             <span class="tag">JavaScript</span>
             <span class="tag">HTML5 &amp; CSS3</span>
             <span class="tag">Mobile Web App</span>
-            <span class="tag">Booking System</span>
-            <span class="tag">REST API</span>
           </div>
           <div class="flex items-center justify-between pt-4 border-t" style="border-color: var(--border);">
             <div class="flex items-center gap-2 font-mono text-xs uppercase tracking-widest"
@@ -2302,10 +2302,14 @@
               <span>View Architecture Details</span>
               <span class="arrow">→</span>
             </div>
-            <div class="w-8 h-8 rounded flex items-center justify-center border text-muted"
-              style="border-color: var(--border-strong);" title="Mobile Web Application">
-              <i class="fas fa-car text-sm text-accent"></i>
-            </div>
+            <a href="https://script.google.com/macros/s/AKfycbyIvFluy0DLAlZeAJa4AOdrDlnrknuQOV8maKFKhzE4z8ijkVWBNMqs63_3c1DL7oEh_A/exec" target="_blank" rel="noopener" onclick="event.stopPropagation();"
+              class="inline-flex items-center gap-1.5 px-3 py-1 rounded text-xs font-mono border hover:border-amber-500 hover:text-amber-400 transition-colors"
+              style="border-color: var(--border-strong); color: var(--fg);"
+              title="Open Live Mobile Web App (Google Apps Script)">
+              <i class="fas fa-rocket text-amber-400"></i>
+              <span>Live App</span>
+              <i class="fas fa-external-link-alt text-[9px] text-muted"></i>
+            </a>
           </div>
         </article>
 
@@ -3603,20 +3607,22 @@
       rental: {
         title: "Aplikasi Rental Mobil — Car Rental & Fleet Booking Service",
         tag: "Car Rental & Fleet Booking Platform",
-        meta: "Mobile Web Application · 2026",
+        meta: "Google Apps Script & Google Sheets Web App · 2026",
         image: "assets/images/project-rental.png",
         github: "#",
+        liveUrl: "https://script.google.com/macros/s/AKfycbyIvFluy0DLAlZeAJa4AOdrDlnrknuQOV8maKFKhzE4z8ijkVWBNMqs63_3c1DL7oEh_A/exec",
         problem: "Traditional car rental services often struggle with manual phone bookings, fragmented schedule tracking, lack of instant vehicle availability visibility, and cumbersome proof-of-payment verification.",
-        solution: "Developed a lightweight, mobile-first Car Rental Service web application designed for on-the-go customer bookings. The platform delivers instant fleet catalog exploration, dynamic date and duration-based pricing calculation, and direct customer reservation workflows with automated booking record dispatch.",
+        solution: "Developed a lightweight, mobile-first Car Rental Service web application deployed via Google Apps Script with a structured Google Sheets relational database. The platform delivers instant fleet catalog exploration, dynamic date and duration-based pricing calculation, and direct customer reservation workflows with automated booking record dispatch.",
         features: [
           "Mobile-optimized responsive booking interface designed for seamless smartphone experience.",
           "Interactive fleet catalog showcasing car models, transmission types, seat capacity, and daily rates.",
           "Dynamic rental duration and price calculation with real-time tariff updates.",
           "Digital customer reservation form capturing pickup date, return schedule, and customer credentials.",
+          "Real-time cloud database synchronization connected directly to a Google Sheets backend.",
           "Automated booking dispatch and status tracking connecting customers with rental administration.",
-          "Centralized records that eliminate manual double-booking errors and accelerate reservation turnaround."
+          "Standalone cloud deployment via Google Apps Script eliminating separate hosting costs."
         ],
-        tech: ["JavaScript (ES6+)", "HTML5", "CSS3", "Mobile Web App", "Google Apps Script", "REST API", "Cloud Database"]
+        tech: ["Google Apps Script", "Google Sheets (Database)", "JavaScript (ES6+)", "HTML5", "CSS3", "Mobile Web App", "Cloud Deployment"]
       }
     };
 
