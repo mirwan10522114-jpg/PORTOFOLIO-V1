@@ -36,7 +36,7 @@ The portfolio highlights Mirwan's dual primary competencies:
 1. **Full-Stack Web Development**: Building scalable, resilient, and responsive web platforms with Laravel, Next.js, React, PHP, and MySQL.
 2. **Data Analytics**: Accredited Associate Data Analyst (**BNSP LSP Informatika**) skilled in data cleaning, exploratory data analysis (EDA), statistical modeling, Power BI dashboards, and advanced SQL querying.
 
-The website features deep architectural breakdowns of **7 enterprise and government production systems**, interactive detail modals with uncropped user interface previews, a **multi-theme switcher** (Obsidian Dark, Clean Editorial Light, Cyberpunk High-Contrast), and an **interactive credential viewer** presenting formally verified government and industry certifications (BNSP, IBM SkillsBuild, Cisco CCNA).
+The website features deep architectural breakdowns of **8 enterprise, mobile, and government production systems**, interactive detail modals with uncropped user interface previews, a **multi-theme switcher** (Obsidian Dark, Clean Editorial Light, Cyberpunk High-Contrast), and an **interactive credential viewer** presenting formally verified government and industry certifications (BNSP, IBM SkillsBuild, Cisco CCNA).
 
 ---
 
@@ -93,6 +93,7 @@ The website features deep architectural breakdowns of **7 enterprise and governm
 | **05** | **WebGIS Kedai Kopi Bandung** | Multi-Criteria Strategic Location Analysis | Next.js, TypeScript, Leaflet.js, OpenStreetMap | [Repository](https://github.com/mirwan10522114-jpg/WebGIS_Analisis-Lokasi-Strategis-Cabang-Kedai-Kopi) |
 | **06** | **SIPUS — Perpustakaan Digital Sekolah** | Digital Library & QR Circulation Desk | React, Vite, TypeScript, Node.js, Express, MySQL | [Repository](https://github.com/mirwan10522114-jpg/SIPUS_WEB_PERPUSTAKAAN) |
 | **07** | **Sistem Absensi Karyawan** | Employee Attendance & Geofencing System | React, TypeScript, Vite, Tailwind CSS, Node.js, Express, MySQL | [Repository](https://github.com/mirwan10522114-jpg/SIS-TEM_ABSENSI_KARYAWAN) |
+| **08** | **Aplikasi Rental Mobil** | Car Rental & Mobile Booking Platform | JavaScript, HTML5, CSS3, Google Apps Script, REST API | [Mobile Web App](#) |
 
 ---
 
@@ -140,6 +141,18 @@ The website features deep architectural breakdowns of **7 enterprise and governm
   - Centralized records that reduce manual tracking and make requests easier to review.
 - **Technologies & Tools**: React · TypeScript · Vite · Tailwind CSS · Node.js · Express · MySQL
 - **Source**: [github.com/mirwan10522114-jpg/SIS-TEM_ABSENSI_KARYAWAN](https://github.com/mirwan10522114-jpg/SIS-TEM_ABSENSI_KARYAWAN)
+
+#### 8. Aplikasi Rental Mobil — Car Rental & Fleet Booking Service
+- **Problem & Context**: Traditional car rental services often struggle with manual phone bookings, fragmented schedule tracking, lack of instant vehicle availability visibility, and cumbersome proof-of-payment verification.
+- **Technical Solution & Implementation**: Developed a lightweight, mobile-first Car Rental Service web application designed for on-the-go customer bookings. The platform delivers instant fleet catalog exploration, dynamic date and duration-based pricing calculation, and direct customer reservation workflows with automated booking record dispatch.
+- **Key Features & Impact**:
+  - Mobile-optimized responsive booking interface designed for seamless smartphone experience.
+  - Interactive fleet catalog showcasing car models, transmission types, seat capacity, and daily rates.
+  - Dynamic rental duration and price calculation with real-time tariff updates.
+  - Digital customer reservation form capturing pickup date, return schedule, and customer credentials.
+  - Automated booking dispatch and status tracking connecting customers with rental administration.
+  - Centralized records that eliminate manual double-booking errors and accelerate reservation turnaround.
+- **Technologies & Tools**: JavaScript (ES6+) · HTML5 · CSS3 · Mobile Web App · Google Apps Script · REST API · Cloud Database
 
 ---
 
