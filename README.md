@@ -92,7 +92,7 @@ The website features deep architectural breakdowns of **7 enterprise and governm
 | **04** | **PosyMart Coffee Shop POS** | Cashier POS & Customer Table QR Orders | Laravel 13, PHP, Alpine.js, Tailwind CSS 4, Chart.js | [Repository](https://github.com/mirwan10522114-jpg/POSYMART_APLIKASI_POS) |
 | **05** | **WebGIS Kedai Kopi Bandung** | Multi-Criteria Strategic Location Analysis | Next.js, TypeScript, Leaflet.js, OpenStreetMap | [Repository](https://github.com/mirwan10522114-jpg/WebGIS_Analisis-Lokasi-Strategis-Cabang-Kedai-Kopi) |
 | **06** | **SIPUS — Perpustakaan Digital Sekolah** | Digital Library & QR Circulation Desk | React, Vite, TypeScript, Node.js, Express, MySQL | [Repository](https://github.com/mirwan10522114-jpg/SIPUS_WEB_PERPUSTAKAAN) |
-| **07** | **Sistem Absensi Karyawan** | Enterprise Attendance & Geofencing Platform | React 19, TypeScript, Vite, Tailwind CSS 4, Node.js, Express, MySQL, Leaflet.js | [Repository](https://github.com/mirwan10522114-jpg/SIS-TEM_ABSENSI_KARYAWAN) |
+| **07** | **Sistem Absensi Karyawan** | Employee Attendance & Geofencing System | React, TypeScript, Vite, Tailwind CSS, Node.js, Express, MySQL | [Repository](https://github.com/mirwan10522114-jpg/SIS-TEM_ABSENSI_KARYAWAN) |
 
 ---
 
@@ -128,9 +128,17 @@ The website features deep architectural breakdowns of **7 enterprise and governm
 - **Overview**: Web-based library management platform streamlining book cataloging, member registration, QR-driven book borrowing/returns, reservations, and automated overdue fine calculations.
 - **Source**: [github.com/mirwan10522114-jpg/SIPUS_WEB_PERPUSTAKAAN](https://github.com/mirwan10522114-jpg/SIPUS_WEB_PERPUSTAKAAN)
 
-#### 7. Sistem Absensi Karyawan — Geofence & Biometric Verification
-- **Overview**: Full-stack enterprise attendance and workforce management platform featuring real-time GPS Geofencing validation, live camera selfie biometric verification, shift scheduling, and HR administrative workflow automation.
-- **Capabilities**: Interactive 100m geofence radius enforcement via Leaflet & OpenStreetMap, anti-proxy selfie logging, multi-shift configurations (Pagi/Siang/Malam), automated punctuality and late tracking, and end-to-end leave (cuti/izin) & overtime (lembur) approval pipelines.
+#### 7. Sistem Absensi Karyawan — Geofence & Biometric Attendance System
+- **Problem & Context**: Managing employee attendance through manual records makes it difficult to track clock-in times, verify work locations, review leave and overtime requests, and maintain accurate records across the organization.
+- **Technical Solution & Implementation**: Built a web-based employee attendance system with separate employee and admin portals. The application records attendance with photo and location data, checks whether employees are within the office geofence, and stores attendance and request data in MySQL.
+- **Key Features & Impact**:
+  - Clock-in and clock-out with photo, GPS location, and geofence checks.
+  - Attendance history and status tracking for employees.
+  - Online leave and overtime requests with admin approval workflows.
+  - Admin dashboard for reviewing attendance and managing employee records.
+  - Configurable office geofence, work settings, and announcements.
+  - Centralized records that reduce manual tracking and make requests easier to review.
+- **Technologies & Tools**: React · TypeScript · Vite · Tailwind CSS · Node.js · Express · MySQL
 - **Source**: [github.com/mirwan10522114-jpg/SIS-TEM_ABSENSI_KARYAWAN](https://github.com/mirwan10522114-jpg/SIS-TEM_ABSENSI_KARYAWAN)
 
 ---
