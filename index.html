@@ -2215,6 +2215,55 @@
           </div>
         </article>
 
+        <!-- Project 7: Sistem Informasi Absensi Karyawan -->
+        <article class="article-card reveal" onclick="openProjectModal('absensi')">
+          <div class="relative w-full aspect-[2/1] rounded-md overflow-hidden mb-5 border group/thumb"
+            style="border-color: var(--border-strong); background: var(--bg-elev-2);">
+            <img src="assets/images/project-absensi.png" alt=""
+              class="absolute inset-0 w-full h-full object-cover blur-md opacity-25 scale-110 pointer-events-none"
+              aria-hidden="true" />
+            <img src="assets/images/project-absensi.png" alt="Sistem Informasi Absensi &amp; Presensi Karyawan UI"
+              class="relative z-10 w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+              loading="lazy" />
+            <div
+              class="absolute top-2.5 right-2.5 z-20 font-mono text-[10px] uppercase font-semibold px-2 py-0.5 rounded bg-black/80 backdrop-blur text-cyan-400 border border-cyan-500/30">
+              GPS &amp; Biometric
+            </div>
+          </div>
+          <div class="flex items-start justify-between mb-3">
+            <div class="card-num">07</div>
+            <span class="tag">Enterprise HR System</span>
+          </div>
+          <div class="font-mono text-xs mb-3" style="color: var(--muted);">08.2026 – 09.2026 · Full-Stack App</div>
+          <h3 class="font-display font-bold text-2xl mb-3 leading-snug">
+            Sistem Absensi Karyawan — Geofence &amp; Biometric
+          </h3>
+          <p class="text-sm mb-6 flex-1" style="color: var(--muted); line-height: 1.65;">
+            Enterprise attendance &amp; HR management platform with real-time GPS Geofencing radius validation, live biometric selfie
+            verification, multi-shift scheduling, and employee leave &amp; overtime approval workflows.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="tag">React 19 &amp; Vite</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Node.js &amp; Express</span>
+            <span class="tag">Leaflet &amp; GPS</span>
+            <span class="tag">MySQL</span>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t" style="border-color: var(--border);">
+            <div class="flex items-center gap-2 font-mono text-xs uppercase tracking-widest"
+              style="color: var(--accent);">
+              <span>View Architecture Details</span>
+              <span class="arrow">→</span>
+            </div>
+            <a href="https://github.com/mirwan10522114-jpg/SIS-TEM_ABSENSI_KARYAWAN" target="_blank" rel="noopener"
+              onclick="event.stopPropagation();"
+              class="w-8 h-8 rounded flex items-center justify-center border hover:border-amber-500 hover:text-accent transition-colors"
+              style="border-color: var(--border-strong); color: var(--fg);" title="View GitHub Repository">
+              <i class="fab fa-github text-sm"></i>
+            </a>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -3487,6 +3536,24 @@
           "Provide administrators with reports, announcements, and activity logs."
         ],
         tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "MySQL", "JWT"]
+      },
+      absensi: {
+        title: "Sistem Absensi Karyawan — GPS Geofence & Biometric Verification",
+        tag: "Enterprise HR & Attendance Platform",
+        meta: "Enterprise Full-Stack Web App · August 2026 – September 2026",
+        image: "assets/images/project-absensi.png",
+        github: "https://github.com/mirwan10522114-jpg/SIS-TEM_ABSENSI_KARYAWAN",
+        problem: "Manual attendance records (paper or standalone fingerprint machines) are prone to proxy attendance (titip absen), lack real-time location validation for field or hybrid staff, and cause delays in HR leave and overtime approval workflows.",
+        solution: "Engineered an enterprise-grade full-stack attendance and HR management platform featuring real-time GPS Geofencing (Leaflet.js), live biometric selfie verification during clock-in/out, multi-shift scheduling, automated late calculations, and an administrative HR dashboard with leave and overtime approval workflows.",
+        features: [
+          "Interactive GPS Geofencing (100m configurable radius) with OpenStreetMap and Leaflet validation to ensure attendance within authorized company coordinates.",
+          "Live camera biometric selfie verification during clock-in and clock-out to eliminate proxy attendance (titip absen).",
+          "Real-time HR analytics dashboard displaying total employee presence, punctuality rate, late arrivals, and pending leave reviews.",
+          "End-to-end leave (cuti/izin) and overtime (lembur) submission workflow with one-click HR approval/rejection disposition.",
+          "Dynamic shift management supporting multi-shift work hours (Pagi/Siang/Malam) and configurable late-arrival thresholds.",
+          "Employee portal and Admin portal switcher with role-based access control (RBAC) and detailed audit logs."
+        ],
+        tech: ["React 19", "TypeScript", "Vite", "Tailwind CSS 4", "Node.js", "Express.js", "MySQL", "Leaflet.js", "OpenStreetMap", "Lucide Icons", "REST API"]
       }
     };
 
