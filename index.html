@@ -671,10 +671,10 @@ body.theme-anim *::after {
   z-index: 25;
   transition: all 0.3s ease;
 }
-.hero-corner-tl { top: -2px; left: -2px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); border-top-left-radius: 4px; }
-.hero-corner-tr { top: -2px; right: -2px; border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); border-top-right-radius: 4px; }
-.hero-corner-bl { bottom: -2px; left: -2px; border-bottom: 2px solid var(--accent); border-left: 2px solid var(--accent); border-bottom-left-radius: 4px; }
-.hero-corner-br { bottom: -2px; right: -2px; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); border-bottom-right-radius: 4px; }
+.hero-corner-tl { top: 4px; left: 4px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+.hero-corner-tr { top: 4px; right: 4px; border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+.hero-corner-bl { bottom: 4px; left: 4px; border-bottom: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+.hero-corner-br { bottom: 4px; right: 4px; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); }
 .hero-portrait-card:hover .hero-corner {
   width: 14px;
   height: 14px;
@@ -682,7 +682,7 @@ body.theme-anim *::after {
 .hero-portrait-img-box {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1.08;
+  aspect-ratio: 1 / 1.05;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -794,7 +794,7 @@ body.theme-anim *::after {
   <div class="mouse-glow" id="mouseGlow"></div>
   
   <div class="relative max-w-7xl mx-auto px-6 w-full" style="z-index: 2;">
-    <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
+    <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start">
       
       <!-- Left Column: Intro, Titles, Bio, CTAs, Stats -->
       <div class="lg:col-span-7 xl:col-span-8">
@@ -869,19 +869,19 @@ body.theme-anim *::after {
       </div>
 
       <!-- Right Column: Profile Portrait with Matching Elements & Cyber HUD Framing -->
-      <div class="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end mt-8 lg:mt-0">
+      <div class="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end lg:pt-3">
         <div class="hero-portrait-wrap">
           <!-- Ambient Glow Background -->
           <div class="hero-ambient-glow"></div>
 
           <!-- Top-Right Floating Badge: UNIKOM Honors -->
-          <div class="hero-floating-chip -top-3 -right-2">
+          <div class="hero-floating-chip -top-3.5 right-3">
             <img src="assets/images/logo-unikom.png" alt="Logo UNIKOM" class="w-3.5 h-3.5 object-contain" />
             <span><strong class="text-accent font-semibold">S.SI</strong> · UNIKOM</span>
           </div>
 
           <!-- Bottom-Left Floating Badge: BNSP Certified -->
-          <div class="hero-floating-chip -bottom-3 -left-2">
+          <div class="hero-floating-chip -bottom-3.5 left-3">
             <span class="inline-flex items-center justify-center bg-white rounded px-1 py-0.5 shadow-xs">
               <img src="assets/images/logo-bnsp.png" alt="BNSP" class="h-2.5 w-auto object-contain" />
             </span>
@@ -890,12 +890,6 @@ body.theme-anim *::after {
 
           <!-- Main Portrait Card -->
           <div class="hero-portrait-card">
-            <!-- 4 Corner Tech Reticle Markers -->
-            <div class="hero-corner hero-corner-tl"></div>
-            <div class="hero-corner hero-corner-tr"></div>
-            <div class="hero-corner hero-corner-bl"></div>
-            <div class="hero-corner hero-corner-br"></div>
-
             <!-- Terminal / HUD Window Header -->
             <div class="flex items-center justify-between pb-2 mb-2 border-b font-mono text-[10px]" style="border-color: var(--border);">
               <div class="flex items-center gap-1.5">
@@ -913,6 +907,12 @@ body.theme-anim *::after {
 
             <!-- Photo Container -->
             <div class="hero-portrait-img-box">
+              <!-- 4 Corner Tech Reticle Markers inside photo container -->
+              <div class="hero-corner hero-corner-tl"></div>
+              <div class="hero-corner hero-corner-tr"></div>
+              <div class="hero-corner hero-corner-bl"></div>
+              <div class="hero-corner hero-corner-br"></div>
+
               <img src="assets/images/profile-mirwan.jpg" alt="Mirwan Kholid, S.SI — Full-Stack Web Developer & Data Analyst" class="hero-portrait-img" loading="eager" />
               
               <!-- Subtle vignette at bottom -->
@@ -922,8 +922,8 @@ body.theme-anim *::after {
               <div class="absolute inset-0 bg-grid opacity-15 pointer-events-none z-10"></div>
 
               <!-- Tech Crosshairs in image corners -->
-              <div class="absolute top-2 left-2 font-mono text-[8px] text-white/50 z-20 pointer-events-none select-none">+ 01</div>
-              <div class="absolute top-2 right-2 font-mono text-[8px] text-white/50 z-20 pointer-events-none select-none">[RAW]</div>
+              <div class="absolute top-2 left-6 font-mono text-[8px] text-white/50 z-20 pointer-events-none select-none">+ 01</div>
+              <div class="absolute top-2 right-6 font-mono text-[8px] text-white/50 z-20 pointer-events-none select-none">[RAW]</div>
 
               <!-- Bottom overlay badge inside image -->
               <div class="absolute bottom-2 left-2 right-2 z-20 flex items-end justify-between font-mono text-[10px] text-white/95">
