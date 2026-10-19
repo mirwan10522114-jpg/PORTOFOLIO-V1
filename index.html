@@ -1146,7 +1146,8 @@
 
       <div class="hidden lg:flex items-center gap-7 font-mono text-xs tracking-wider">
         <a href="#about" class="hover-link">ABOUT</a>
-        <a href="#experience" class="hover-link">EXPERIENCE</a>
+        <a href="#experience" class="hover-link">KERJA</a>
+        <a href="#organization" class="hover-link">ORGANISASI</a>
         <a href="#projects" class="hover-link">PROJECTS</a>
         <a href="#skills" class="hover-link">SKILLS</a>
         <a href="#certifications" class="hover-link">CERTIFICATIONS</a>
@@ -1604,80 +1605,24 @@
     </div>
   </section>
 
-  <!-- Experience & Leadership Section (Tabbed) -->
+  <!-- ================= 02. PENGALAMAN KERJA PROFESIONAL (TERPISAH) ================= -->
   <section class="py-24 md:py-32 px-6" id="experience" style="background: var(--bg-elev);">
     <div class="max-w-6xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-        <div class="font-mono text-xs uppercase tracking-widest mb-3" style="color: var(--accent);">// 02. Journey &
-          Track Record</div>
+        <div class="font-mono text-xs uppercase tracking-widest mb-3" style="color: var(--accent);">// 02. Professional Track Record</div>
         <h2 class="font-display font-black text-4xl md:text-6xl mb-6" style="letter-spacing: -0.03em;">
-          Experience & <span style="font-style: italic; font-weight: 400;">Leadership</span>
+          Pengalaman <span style="font-style: italic; font-weight: 400;">Kerja</span>
         </h2>
         <p class="text-base" style="color: var(--muted);">
-          A combination of professional software development engagements and high-responsibility organizational
-          leadership roles.
+          Pengembangan arsitektur web modern dan sistem informasi berbasis produksi untuk instansi pemerintahan serta institusi komunitas riil.
         </p>
-
-        <!-- Tab Controls -->
-        <div class="flex justify-center gap-3 mt-8">
-          <button class="tab-pill active" id="tabWorkBtn" onclick="switchExperienceTab('work')">
-            <i class="fas fa-laptop-code mr-1"></i> Professional Experience
-          </button>
-          <button class="tab-pill" id="tabOrgBtn" onclick="switchExperienceTab('org')">
-            <i class="fas fa-users-cog mr-1"></i> Leadership & Organizations
-          </button>
-        </div>
       </div>
 
-      <!-- Tab 1: Work Experience -->
+      <!-- Work Experience Cards -->
       <div id="experienceWork" class="reveal">
         <div class="space-y-8 max-w-4xl mx-auto">
 
-          <!-- Experience 1 -->
-          <div class="timeline-item">
-            <div class="timeline-bullet"></div>
-            <div class="p-6 md:p-8 rounded-lg border" style="background: var(--card); border-color: var(--border);">
-              <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
-                <div class="flex items-center gap-3.5">
-                  <div
-                    class="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden flex-shrink-0 border p-1 bg-white shadow-sm transition-transform hover:scale-105"
-                    style="border-color: var(--border-strong);">
-                    <img src="assets/images/logo-banksampah.png" alt="Logo Bank Sampah Sukamaju Sejahtera"
-                      class="w-full h-full object-contain rounded-full" />
-                  </div>
-                  <div>
-                    <h3 class="font-display font-bold text-2xl text-fg">Web Developer</h3>
-                    <div class="font-mono text-sm font-semibold" style="color: var(--accent);">Bank Sampah Sukamaju
-                      Sejahtera</div>
-                  </div>
-                </div>
-                <div
-                  class="font-mono text-xs px-3 py-1 rounded bg-amber-500/10 text-amber-500 border border-amber-500/20 whitespace-nowrap self-start">
-                  July 2026 – September 2026 · Kab. Bandung Barat
-                </div>
-              </div>
-              <p class="text-sm mb-4" style="color: var(--muted);">
-                Led the design and development of the official web application and digital management system for Bank
-                Sampah Sukamaju Sejahtera.
-              </p>
-              <ul class="space-y-2 text-sm text-fg-dim font-sans list-disc list-inside">
-                <li>Architected and developed a full-featured website to manage community waste bank operations, service
-                  information, and transaction workflows.</li>
-                <li>Created an intuitive, accessible user interface ensuring seamless interaction for community members
-                  of various digital literacy levels.</li>
-                <li>Developed structured database schemas and responsive layouts to significantly improve accessibility,
-                  data consistency, and user experience.</li>
-              </ul>
-              <div class="mt-5 flex flex-wrap gap-2">
-                <span class="tag">Web Development</span>
-                <span class="tag">Full-Stack</span>
-                <span class="tag">Database Design</span>
-                <span class="tag">UI/UX</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Experience 2 -->
+          <!-- Work 1: Disdik KBB -->
           <div class="timeline-item">
             <div class="timeline-bullet"></div>
             <div class="p-6 md:p-8 rounded-lg border" style="background: var(--card); border-color: var(--border);">
@@ -1691,44 +1636,93 @@
                   </div>
                   <div>
                     <h3 class="font-display font-bold text-2xl text-fg">Web Developer</h3>
-                    <div class="font-mono text-sm font-semibold" style="color: var(--accent-2);">Dinas Pendidikan
-                      Kabupaten Bandung Barat</div>
+                    <div class="font-mono text-sm font-semibold" style="color: var(--accent-2);">Dinas Pendidikan Kab. Bandung Barat</div>
                   </div>
                 </div>
                 <div
                   class="font-mono text-xs px-3 py-1 rounded bg-cyan-500/10 text-cyan-500 border border-cyan-500/20 whitespace-nowrap self-start">
-                  August 2025 – October 2025 · Kab. Bandung Barat
+                  2025 · Kab. Bandung Barat
                 </div>
               </div>
               <p class="text-sm mb-4" style="color: var(--muted);">
-                Spearheaded the development of a mission-critical web-based periodic salary progression system for
-                teachers across the district.
+                Membangun subsistem PETADIK untuk otomatisasi verifikasi Kenaikan Gaji Berkala (KGB) ribuan tenaga pendidik se-KBB.
               </p>
               <ul class="space-y-2 text-sm text-fg-dim font-sans list-disc list-inside">
-                <li>Developed a comprehensive web-based <strong>Kenaikan Gaji Berkala (KGB)</strong> system for teachers
-                  within Kabupaten Bandung Barat.</li>
-                <li>Designed and implemented a clean, user-friendly interface to automate administrative workflows and
-                  simplify salary progression calculations.</li>
-                <li>Successfully modernized legacy paper-based procedures into a secure digital platform, reducing
-                  verification delays and operational overhead.</li>
+                <li>Membangun modul KGB guru terintegrasi untuk ribuan tenaga pendidik di lingkungan Dinas Pendidikan Kabupaten Bandung Barat.</li>
+                <li>Mengembangkan antarmuka responsif dan alur verifikasi berkas berjenjang 2 tahunan, meniadakan proses manual berkas fisik.</li>
+                <li>Mempercepat turnaround penerbitan SK KGB resmi siap unduh/cetak serta meniadakan antrean fisik operator sekolah ke kantor dinas.</li>
               </ul>
               <div class="mt-5 flex flex-wrap gap-2">
                 <span class="tag tag-cyan">Government Digitization</span>
                 <span class="tag tag-cyan">Salary Progression Engine</span>
                 <span class="tag tag-cyan">Workflow Automation</span>
-                <span class="tag tag-cyan">PHP & MySQL</span>
+                <span class="tag tag-cyan">PHP &amp; MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Work 2: Bank Sampah Sukamaju Sejahtera -->
+          <div class="timeline-item">
+            <div class="timeline-bullet"></div>
+            <div class="p-6 md:p-8 rounded-lg border" style="background: var(--card); border-color: var(--border);">
+              <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                <div class="flex items-center gap-3.5">
+                  <div
+                    class="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden flex-shrink-0 border p-1 bg-white shadow-sm transition-transform hover:scale-105"
+                    style="border-color: var(--border-strong);">
+                    <img src="assets/images/logo-banksampah.png" alt="Logo Bank Sampah Sukamaju Sejahtera"
+                      class="w-full h-full object-contain rounded-full" />
+                  </div>
+                  <div>
+                    <h3 class="font-display font-bold text-2xl text-fg">Web Developer</h3>
+                    <div class="font-mono text-sm font-semibold" style="color: var(--accent);">Bank Sampah Sukamaju Sejahtera</div>
+                  </div>
+                </div>
+                <div
+                  class="font-mono text-xs px-3 py-1 rounded bg-amber-500/10 text-amber-500 border border-amber-500/20 whitespace-nowrap self-start">
+                  2026 · Kab. Bandung Barat
+                </div>
+              </div>
+              <p class="text-sm mb-4" style="color: var(--muted);">
+                Memimpin perancangan dan pengembangan aplikasi web resmi serta sistem manajemen digital Bank Sampah Sukamaju Sejahtera untuk menunjang skripsi dan operasional warga.
+              </p>
+              <ul class="space-y-2 text-sm text-fg-dim font-sans list-disc list-inside">
+                <li>Merancang dan membangun website lengkap untuk mengelola operasional bank sampah, informasi layanan, dan alur transaksi setoran warga.</li>
+                <li>Mengembangkan antarmuka pengguna yang intuitif dan mudah diakses oleh warga dari berbagai tingkat literasi digital.</li>
+                <li>Menyusun skema basis data relasional (3NF) dan tata letak responsif untuk meningkatkan konsistensi data dan efisiensi pelaporan.</li>
+              </ul>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="tag">Web Development</span>
+                <span class="tag">Full-Stack</span>
+                <span class="tag">Database Design</span>
+                <span class="tag">Next.js 14 &amp; TypeScript</span>
               </div>
             </div>
           </div>
 
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Tab 2: Organizations & Leadership (Hidden by default) -->
-      <div id="experienceOrg" class="hidden reveal">
+  <!-- ================= 03. PENGALAMAN ORGANISASI & KEPEMIMPINAN (TERPISAH) ================= -->
+  <section class="py-24 md:py-32 px-6" id="organization" style="background: var(--bg);">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <div class="font-mono text-xs uppercase tracking-widest mb-3" style="color: var(--accent-2);">// 03. Leadership &amp; Community Governance</div>
+        <h2 class="font-display font-black text-4xl md:text-6xl mb-6" style="letter-spacing: -0.03em;">
+          Pengalaman <span style="font-style: italic; font-weight: 400;">Organisasi</span>
+        </h2>
+        <p class="text-base" style="color: var(--muted);">
+          Perjalanan kepemimpinan eksekutif, koordinasi kader aktif, serta tata kelola program strategis lintas organisasi kampus hingga tingkat regional.
+        </p>
+      </div>
+
+      <!-- Organization Cards -->
+      <div id="experienceOrg" class="reveal">
         <div class="space-y-8 max-w-4xl mx-auto">
 
-          <!-- Org 1 -->
+          <!-- Org 1: SAPMA PP UNIKOM -->
           <div class="timeline-item">
             <div class="timeline-bullet"></div>
             <div class="p-6 md:p-8 rounded-lg border" style="background: var(--card); border-color: var(--border);">
@@ -1741,34 +1735,32 @@
                       class="w-full h-full object-contain drop-shadow" />
                   </div>
                   <div>
-                    <h3 class="font-display font-bold text-2xl text-fg">Chairperson</h3>
-                    <div class="font-mono text-sm font-semibold" style="color: var(--accent);">Satuan Pelajar dan
-                      Mahasiswa Pemuda Pancasila UNIKOM (SAPMA PP)</div>
+                    <h3 class="font-display font-bold text-2xl text-fg">Ketua</h3>
+                    <div class="font-mono text-sm font-semibold" style="color: var(--accent);">SAPMA PP UNIKOM &amp; Kelulusan S.Kom.</div>
                   </div>
                 </div>
                 <div
                   class="font-mono text-xs px-3 py-1 rounded bg-amber-500/10 text-amber-500 border border-amber-500/20 whitespace-nowrap self-start">
-                  February 2026 – Present · Kota Bandung
+                  2026 — SEKARANG · Kota Bandung
                 </div>
               </div>
+              <p class="text-sm mb-4" style="color: var(--muted);">
+                Memimpin organisasi mahasiswa, menuntaskan skripsi sistem Bank Sampah Sukamaju Sejahtera, dan meraih sertifikasi profesi BNSP.
+              </p>
               <ul class="space-y-2 text-sm text-fg-dim font-sans list-disc list-inside">
-                <li>Lead organizational strategy and coordinate active members to drive high-impact student programs and
-                  community outreach.</li>
-                <li>Oversee event planning, operational logistics, budget allocations, and inter-divisional
-                  collaboration.</li>
-                <li>Supervise multi-tiered programs, maintain disciplinary excellence, and foster effective
-                  communication across all university chapters.</li>
+                <li>Memimpin organisasi mahasiswa berskala universitas dengan puluhan kader aktif lintas fakultas di UNIKOM.</li>
+                <li>Menuntaskan skripsi sistem digital Bank Sampah Sukamaju Sejahtera berbarengan dengan kepemimpinan organisasi dan meraih sertifikasi BNSP.</li>
+                <li>Mengawasi alokasi anggaran, manajemen logistik kegiatan akbar, dan diplomasi antarlembaga universitas.</li>
               </ul>
               <div class="mt-5 flex flex-wrap gap-2">
                 <span class="tag">Organizational Strategy</span>
                 <span class="tag">Executive Leadership</span>
-                <span class="tag">Student Affairs</span>
-                <span class="tag">Event Coordination</span>
+                <span class="tag">SAPMA PP UNIKOM</span>
               </div>
             </div>
           </div>
 
-          <!-- Org 2 -->
+          <!-- Org 2: ORADO Kota Bandung -->
           <div class="timeline-item">
             <div class="timeline-bullet"></div>
             <div class="p-6 md:p-8 rounded-lg border" style="background: var(--card); border-color: var(--border);">
@@ -1782,32 +1774,31 @@
                       class="w-full h-full object-contain" />
                   </div>
                   <div>
-                    <h3 class="font-display font-bold text-2xl text-fg">Head of Athlete Training and Development</h3>
-                    <div class="font-mono text-sm font-semibold" style="color: var(--accent-2);">Federasi Olahraga
-                      Domino Nasional (ORADO) Kota Bandung</div>
+                    <h3 class="font-display font-bold text-2xl text-fg">Kepala Divisi Diklat</h3>
+                    <div class="font-mono text-sm font-semibold" style="color: var(--accent-2);">ORADO Kota Bandung</div>
                   </div>
                 </div>
                 <div
                   class="font-mono text-xs px-3 py-1 rounded bg-cyan-500/10 text-cyan-500 border border-cyan-500/20 whitespace-nowrap self-start">
-                  October 2026 – Present · Kota Bandung
+                  2026 — SEKARANG · Kota Bandung
                 </div>
               </div>
+              <p class="text-sm mb-4" style="color: var(--muted);">
+                Menyusun standarisasi kurikulum pelatihan dan pembinaan atlet olahraga domino Kota Bandung.
+              </p>
               <ul class="space-y-2 text-sm text-fg-dim font-sans list-disc list-inside">
-                <li>Coordinate athlete training regiments and strategic skill development programs to maximize
-                  competitive tournament results.</li>
-                <li>Design performance metrics, track athlete progress, and manage event logistics for regional and
-                  national competitions.</li>
+                <li>Menyusun standarisasi kurikulum pelatihan dan pembinaan atlet olahraga domino Kota Bandung.</li>
+                <li>Merancang modul latihan berbasis analisis statistik permainan dan menyupervisi turnamen seleksi daerah.</li>
               </ul>
               <div class="mt-5 flex flex-wrap gap-2">
                 <span class="tag tag-cyan">Athlete Development</span>
                 <span class="tag tag-cyan">Performance Analytics</span>
-                <span class="tag tag-cyan">Tournament Logistics</span>
-                <span class="tag tag-cyan">Sports Management</span>
+                <span class="tag tag-cyan">ORADO Kota Bandung</span>
               </div>
             </div>
           </div>
 
-          <!-- Org 3 -->
+          <!-- Org 3: KIPAN Bandung Barat -->
           <div class="timeline-item">
             <div class="timeline-bullet"></div>
             <div class="p-6 md:p-8 rounded-lg border" style="background: var(--card); border-color: var(--border);">
@@ -1821,34 +1812,31 @@
                       class="w-full h-full object-contain" />
                   </div>
                   <div>
-                    <h3 class="font-display font-bold text-2xl text-fg">Vice Chairperson</h3>
-                    <div class="font-mono text-sm font-semibold" style="color: var(--accent);">Kader Inti Pemuda Anti
-                      Narkoba Bandung Barat (KIPAN)</div>
+                    <h3 class="font-display font-bold text-2xl text-fg">Wakil Ketua</h3>
+                    <div class="font-mono text-sm font-semibold" style="color: var(--accent);">KIPAN Bandung Barat</div>
                   </div>
                 </div>
                 <div
                   class="font-mono text-xs px-3 py-1 rounded bg-amber-500/10 text-amber-500 border border-amber-500/20 whitespace-nowrap self-start">
-                  July 2024 – July 2025 · Kab. Bandung Barat
+                  2024 — SEKARANG · Kab. Bandung Barat
                 </div>
               </div>
+              <p class="text-sm mb-4" style="color: var(--muted);">
+                Mengordinasikan program kaderisasi pemuda anti narkoba dan menginisiasi sistem database keanggotaan terintegrasi.
+              </p>
               <ul class="space-y-2 text-sm text-fg-dim font-sans list-disc list-inside">
-                <li>Assisted top leadership in architecting youth empowerment programs and district-wide drug prevention
-                  awareness campaigns.</li>
-                <li>Coordinated hundreds of youth cadres and spearheaded interactive workshops promoting healthy,
-                  productive lifestyles.</li>
-                <li>Fostered strong cross-agency partnerships with local government and youth coalitions to amplify
-                  campaign reach.</li>
+                <li>Mengordinasikan ratusan kader pemuda dan menyelenggarakan workshop interaktif pola hidup sehat di berbagai kecamatan.</li>
+                <li>Menginisiasi sistem database keanggotaan terintegrasi dan memperkuat kemitraan strategis dengan dinas terkait.</li>
               </ul>
               <div class="mt-5 flex flex-wrap gap-2">
                 <span class="tag">Youth Leadership</span>
                 <span class="tag">Anti-Drug Advocacy</span>
-                <span class="tag">Cadre Empowerment</span>
-                <span class="tag">Inter-Agency Partnerships</span>
+                <span class="tag">KIPAN Bandung Barat</span>
               </div>
             </div>
           </div>
 
-          <!-- Org 4 -->
+          <!-- Org 4: HIMA SI UNIKOM -->
           <div class="timeline-item">
             <div class="timeline-bullet"></div>
             <div class="p-6 md:p-8 rounded-lg border" style="background: var(--card); border-color: var(--border);">
@@ -1862,36 +1850,32 @@
                       class="w-full h-full object-contain" />
                   </div>
                   <div>
-                    <h3 class="font-display font-bold text-2xl text-fg">Vice Chairperson</h3>
-                    <div class="font-mono text-sm font-semibold" style="color: var(--accent-2);">Himpunan Mahasiswa
-                      Sistem Informasi UNIKOM (HIMA SI)</div>
+                    <h3 class="font-display font-bold text-2xl text-fg">Wakil Ketua</h3>
+                    <div class="font-mono text-sm font-semibold" style="color: var(--accent-2);">Himpunan Mahasiswa Sistem Informasi (HIMA SI) UNIKOM</div>
                   </div>
                 </div>
                 <div
                   class="font-mono text-xs px-3 py-1 rounded bg-cyan-500/10 text-cyan-500 border border-cyan-500/20 whitespace-nowrap self-start">
-                  November 2023 – August 2024 · Kota Bandung
+                  2023 — 2024 · Kota Bandung
                 </div>
               </div>
+              <p class="text-sm mb-4" style="color: var(--muted);">
+                Memimpin departemen internal, menyukseskan program kerja akademik himpunan, dan meraih sertifikasi jaringan Cisco.
+              </p>
               <ul class="space-y-2 text-sm text-fg-dim font-sans list-disc list-inside">
-                <li>Partnered with the Chairperson to manage operations, strategic roadmaps, and departmental resource
-                  planning for Information Systems students.</li>
-                <li>Organized premier academic seminars, national webinars, technical coding workshops, and
-                  collaborative student initiatives.</li>
-                <li>Conducted quarterly organizational evaluations that elevated member participation and departmental
-                  synergy.</li>
+                <li>Memimpin departemen internal, mengoordinasikan rapat kerja, dan menyukseskan program akademik himpunan.</li>
+                <li>Menyelenggarakan seminar teknologi berskala nasional dan meraih sertifikasi jaringan Cisco.</li>
               </ul>
               <div class="mt-5 flex flex-wrap gap-2">
                 <span class="tag tag-cyan">Departmental Leadership</span>
                 <span class="tag tag-cyan">Student Operations</span>
-                <span class="tag tag-cyan">Event Management</span>
-                <span class="tag tag-cyan">UNIKOM</span>
+                <span class="tag tag-cyan">HIMA SI UNIKOM</span>
               </div>
             </div>
           </div>
 
         </div>
       </div>
-
     </div>
   </section>
 
