@@ -1167,7 +1167,7 @@
             <!-- Top-Right Floating Badge: UNIKOM Honors -->
             <div class="hero-floating-chip right-3" style="top: -16px;">
               <img src="assets/images/logo-unikom.png" alt="Logo UNIKOM" class="w-3.5 h-3.5 object-contain" />
-              <span><strong class="text-accent font-semibold">S.SI</strong> · UNIKOM (3.68)</span>
+              <span><strong class="text-accent font-semibold">S.Kom.</strong> · UNIKOM (3.68)</span>
             </div>
 
             <!-- Bottom-Left Floating Badge: BNSP Certified -->
@@ -1298,14 +1298,18 @@
   </div>
 
   <!-- About Section -->
-  <section class="py-24 md:py-28 px-6" id="about">
+  <section class="py-24 md:py-32 px-6" id="about">
     <div class="max-w-7xl mx-auto">
-      <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <!-- Section Kicker Header -->
+      <div class="font-mono text-xs uppercase tracking-widest mb-6 reveal" style="color: var(--accent);">
+        // 01. Profile &amp; Philosophy
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start">
+        <!-- Left Column: Title & Narrative -->
         <div class="lg:col-span-5 reveal">
-          <div class="font-mono text-xs uppercase tracking-widest mb-3" style="color: var(--accent);">// 01. Profile &
-            Philosophy</div>
           <h2 class="font-display font-black text-4xl md:text-5xl mb-6"
-            style="letter-spacing: -0.03em; line-height: 1.1;">
+            style="letter-spacing: -0.03em; line-height: 1.12;">
             Engineering systems that solve <span style="font-style: italic; font-weight: 400;">real-world operational
               bottlenecks.</span>
           </h2>
@@ -1338,69 +1342,145 @@
           </div>
         </div>
 
+        <!-- Right Column: Enlarged Quick Bio Card, aligned at the top with "Engineering systems" -->
         <div class="lg:col-span-7 reveal">
-          <div class="p-8 rounded-lg border relative"
+          <div class="p-7 sm:p-9 md:p-10 rounded-2xl border relative shadow-xl"
             style="background: var(--bg-elev); border-color: var(--border-strong);">
-            <div class="flex items-center justify-between mb-8 pb-4 border-b" style="border-color: var(--border);">
-              <div class="font-mono text-sm font-semibold flex items-center gap-2">
-                <i class="fas fa-id-badge text-amber-500"></i> Quick Bio & Core Highlights
+
+            <!-- Card Header -->
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-8 pb-5 border-b"
+              style="border-color: var(--border);">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 rounded-xl flex items-center justify-center text-amber-500 bg-amber-500/10 border border-amber-500/20 text-lg shadow-sm">
+                  <i class="fas fa-id-badge"></i>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-xl md:text-2xl text-fg leading-tight">Quick Bio &amp; Core
+                    Highlights</h3>
+                  <div class="font-mono text-[11px] text-muted tracking-wider uppercase">Verified Academic &amp;
+                    Leadership Record</div>
+                </div>
               </div>
               <span
-                class="font-mono text-xs px-2.5 py-1 rounded bg-amber-500/10 text-amber-500 border border-amber-500/20">Active</span>
+                class="font-mono text-xs px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                Active / Available
+              </span>
             </div>
 
-            <div class="grid sm:grid-cols-2 gap-6 font-mono text-xs">
-              <div>
-                <span class="text-muted block mb-1 uppercase tracking-wider text-[11px]">Degree & Major</span>
-                <strong class="text-fg text-sm block">S.Kom. (Bachelor of Information Systems)</strong>
-                <span class="inline-flex items-center gap-1.5" style="color: var(--muted);">
+            <!-- 4 Core Data Sub-Cards -->
+            <div class="grid sm:grid-cols-2 gap-4 md:gap-5 font-mono">
+              <!-- Item 1: Degree & Major -->
+              <div class="p-4 rounded-xl border transition-colors hover:border-amber-500/30"
+                style="background: var(--bg-elev-2); border-color: var(--border);">
+                <span class="text-muted block mb-1.5 uppercase tracking-wider text-[10px] font-semibold">// Degree &amp;
+                  Major</span>
+                <strong class="text-fg text-sm md:text-base font-bold block mb-1.5 leading-snug">S.Kom. (Bachelor of
+                  Information Systems)</strong>
+                <span class="inline-flex items-center gap-1.5 text-xs" style="color: var(--muted);">
                   <img src="assets/images/logo-unikom.png" alt="Logo UNIKOM"
-                    class="w-3.5 h-3.5 object-contain inline-block" />
-                  Universitas Komputer Indonesia (2022 - 2026)
+                    class="w-4 h-4 object-contain inline-block flex-shrink-0" />
+                  Universitas Komputer Indonesia (2022 – 2026)
                 </span>
               </div>
-              <div>
-                <span class="text-muted block mb-1 uppercase tracking-wider text-[11px]">Cumulative GPA</span>
-                <strong class="text-accent text-sm block">3.68 / 4.00 (High Distinction)</strong>
-                <span style="color: var(--muted);">Top percentile coursework performance</span>
+
+              <!-- Item 2: GPA -->
+              <div class="p-4 rounded-xl border transition-colors hover:border-amber-500/30"
+                style="background: var(--bg-elev-2); border-color: var(--border);">
+                <span class="text-muted block mb-1.5 uppercase tracking-wider text-[10px] font-semibold">// Cumulative
+                  GPA</span>
+                <strong class="text-accent text-sm md:text-base font-bold block mb-1.5 leading-snug">3.68 / 4.00 (High
+                  Distinction)</strong>
+                <span class="text-xs block" style="color: var(--muted);">Top percentile coursework performance</span>
               </div>
-              <div>
-                <span class="text-muted block mb-1 uppercase tracking-wider text-[11px]">Primary Focus</span>
-                <strong class="text-fg text-sm block">Full-Stack Dev &amp; Data Analyst</strong>
-                <span style="color: var(--muted);">Laravel, React, Next.js, Python, Power BI, SQL</span>
+
+              <!-- Item 3: Primary Focus -->
+              <div class="p-4 rounded-xl border transition-colors hover:border-cyan-500/30"
+                style="background: var(--bg-elev-2); border-color: var(--border);">
+                <span class="text-muted block mb-1.5 uppercase tracking-wider text-[10px] font-semibold">// Primary
+                  Focus</span>
+                <strong class="text-fg text-sm md:text-base font-bold block mb-1.5 leading-snug">Full-Stack Dev &amp;
+                  Data Analyst</strong>
+                <span class="text-xs block" style="color: var(--muted);">Laravel, React, Next.js, Python, Power BI,
+                  SQL</span>
               </div>
-              <div>
-                <span class="text-muted block mb-1 uppercase tracking-wider text-[11px]">Certifications</span>
-                <strong class="text-fg text-sm flex items-center gap-1.5">
+
+              <!-- Item 4: Certifications -->
+              <div class="p-4 rounded-xl border transition-colors hover:border-emerald-500/30"
+                style="background: var(--bg-elev-2); border-color: var(--border);">
+                <span class="text-muted block mb-1.5 uppercase tracking-wider text-[10px] font-semibold">//
+                  Certifications</span>
+                <strong class="text-fg text-sm md:text-base font-bold flex items-center gap-1.5 mb-1.5 leading-snug">
                   <span
-                    class="inline-flex items-center justify-center bg-white rounded px-1 py-0.5 shadow-xs flex-shrink-0">
+                    class="inline-flex items-center justify-center bg-white rounded px-1.5 py-0.5 shadow-xs flex-shrink-0">
                     <img src="assets/images/logo-bnsp.png" alt="BNSP" class="h-3 w-auto object-contain" />
                   </span>
                   <span>BNSP Associate Data Analyst</span>
                 </strong>
-                <span style="color: var(--muted);">Cisco CCNA (2x) & IBM SkillsBuild</span>
+                <span class="text-xs block" style="color: var(--muted);">Cisco CCNA (2x Verified) &amp; IBM
+                  SkillsBuild</span>
               </div>
-              <div class="sm:col-span-2 pt-2 border-t" style="border-color: var(--border);">
-                <span class="text-muted block mb-2 uppercase tracking-wider text-[11px]">Core Leadership</span>
-                <div class="flex flex-wrap gap-2 text-xs">
-                  <span
-                    class="px-2 py-1 rounded bg-black/20 border border-white/10 inline-flex items-center gap-1.5"><img
-                      src="assets/images/logo-sapma.png" alt="SAPMA PP UNIKOM" class="w-3.5 h-3.5 object-contain" /> SAPMA PP UNIKOM
-                    (Chairperson)</span>
-                  <span
-                    class="px-2 py-1 rounded bg-black/20 border border-white/10 inline-flex items-center gap-1.5"><img
-                      src="assets/images/logo-orado.png" alt="ORADO" class="w-3.5 h-3.5 object-contain" /> ORADO Kota Bandung (Head of Training)</span>
-                  <span
-                    class="px-2 py-1 rounded bg-black/20 border border-white/10 inline-flex items-center gap-1.5"><img
-                      src="assets/images/logo-kipan.png" alt="KIPAN" class="w-3.5 h-3.5 object-contain" /> KIPAN Bandung Barat (Vice
-                    Chairperson)</span>
-                  <span
-                    class="px-2 py-1 rounded bg-black/20 border border-white/10 inline-flex items-center gap-1.5"><img
-                      src="assets/images/logo-himasi.png" alt="HIMA SI" class="w-3.5 h-3.5 object-contain" /> HIMA SI
-                    UNIKOM (Vice Chairperson)</span>
+
+              <!-- Item 5: Leadership Grid (Full Width) -->
+              <div class="sm:col-span-2 pt-4 mt-1 border-t" style="border-color: var(--border);">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-muted uppercase tracking-wider text-[10px] font-semibold">// Core Leadership Track
+                    Record</span>
+                  <span class="text-[10px] text-muted">4 Key Appointments</span>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-2.5 text-xs">
+                  <!-- Org 1 -->
+                  <div
+                    class="p-2.5 px-3 rounded-lg border flex items-center gap-2.5 transition-colors hover:border-amber-500/40"
+                    style="background: var(--bg-elev-2); border-color: var(--border);">
+                    <img src="assets/images/logo-sapma.png" alt="SAPMA PP UNIKOM"
+                      class="w-6 h-6 object-contain flex-shrink-0 drop-shadow-xs" />
+                    <div class="truncate">
+                      <div class="font-bold text-fg text-xs truncate">SAPMA PP UNIKOM</div>
+                      <div class="text-[10px] text-amber-500 font-medium">Chairperson</div>
+                    </div>
+                  </div>
+
+                  <!-- Org 2 -->
+                  <div
+                    class="p-2.5 px-3 rounded-lg border flex items-center gap-2.5 transition-colors hover:border-cyan-500/40"
+                    style="background: var(--bg-elev-2); border-color: var(--border);">
+                    <img src="assets/images/logo-orado.png" alt="ORADO Kota Bandung"
+                      class="w-6 h-6 object-contain flex-shrink-0 drop-shadow-xs" />
+                    <div class="truncate">
+                      <div class="font-bold text-fg text-xs truncate">ORADO Kota Bandung</div>
+                      <div class="text-[10px] text-cyan-400 font-medium">Head of Training</div>
+                    </div>
+                  </div>
+
+                  <!-- Org 3 -->
+                  <div
+                    class="p-2.5 px-3 rounded-lg border flex items-center gap-2.5 transition-colors hover:border-amber-500/40"
+                    style="background: var(--bg-elev-2); border-color: var(--border);">
+                    <img src="assets/images/logo-kipan.png" alt="KIPAN Bandung Barat"
+                      class="w-6 h-6 object-contain flex-shrink-0 drop-shadow-xs" />
+                    <div class="truncate">
+                      <div class="font-bold text-fg text-xs truncate">KIPAN Bandung Barat</div>
+                      <div class="text-[10px] text-amber-500 font-medium">Vice Chairperson</div>
+                    </div>
+                  </div>
+
+                  <!-- Org 4 -->
+                  <div
+                    class="p-2.5 px-3 rounded-lg border flex items-center gap-2.5 transition-colors hover:border-cyan-500/40"
+                    style="background: var(--bg-elev-2); border-color: var(--border);">
+                    <img src="assets/images/logo-himasi.png" alt="HIMA SI UNIKOM"
+                      class="w-6 h-6 object-contain flex-shrink-0 drop-shadow-xs" />
+                    <div class="truncate">
+                      <div class="font-bold text-fg text-xs truncate">HIMA SI UNIKOM</div>
+                      <div class="text-[10px] text-cyan-400 font-medium">Vice Chairperson</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -1540,8 +1620,7 @@
                   <div
                     class="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden flex-shrink-0 border p-1 bg-black/60 shadow-sm transition-transform hover:scale-105 flex items-center justify-center"
                     style="border-color: var(--border-strong);">
-                    <img src="assets/images/logo-sapma.png"
-                      alt="Logo SAPMA Pemuda Pancasila Komisariat UNIKOM"
+                    <img src="assets/images/logo-sapma.png" alt="Logo SAPMA Pemuda Pancasila Komisariat UNIKOM"
                       class="w-full h-full object-contain drop-shadow" />
                   </div>
                   <div>
