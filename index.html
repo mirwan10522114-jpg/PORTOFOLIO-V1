@@ -990,34 +990,120 @@
       box-shadow: 0 10px 24px -3px rgba(0, 0, 0, 0.45), 0 0 12px var(--glow);
     }
 
-    /* === SKILL VISUAL PERCENTAGE BARS === */
-    .skill-bar-track {
+    /* === SKILL TIER SEGMENTED METER & BADGES === */
+    .skill-tier-meter {
+      display: flex;
+      gap: 3.5px;
       width: 100%;
-      height: 6px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.08);
-      overflow: hidden;
-      position: relative;
+      height: 5px;
+      margin-top: 4px;
     }
 
-    [data-theme="light"] .skill-bar-track {
+    .skill-tier-seg {
+      flex: 1;
+      height: 100%;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    [data-theme="light"] .skill-tier-seg {
       background: rgba(0, 0, 0, 0.08);
     }
 
-    .skill-bar-fill-amber {
-      height: 100%;
-      border-radius: 999px;
-      background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.55), var(--accent));
-      box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.35);
-      transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Amber active segments (Web & DB) */
+    .skill-tier-seg.active-amber {
+      background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.8), var(--accent));
+      box-shadow: 0 0 8px rgba(var(--accent-rgb), 0.45);
     }
 
-    .skill-bar-fill-cyan {
-      height: 100%;
-      border-radius: 999px;
-      background: linear-gradient(90deg, rgba(var(--accent-2-rgb), 0.55), var(--accent-2));
-      box-shadow: 0 0 10px rgba(var(--accent-2-rgb), 0.35);
-      transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Cyan active segments (Analytics & Leadership) */
+    .skill-tier-seg.active-cyan {
+      background: linear-gradient(90deg, rgba(var(--accent-2-rgb), 0.8), var(--accent-2));
+      box-shadow: 0 0 8px rgba(var(--accent-2-rgb), 0.45);
+    }
+
+    /* Emerald active segments (Certified BNSP) */
+    .skill-tier-seg.active-emerald {
+      background: linear-gradient(90deg, #10b981, #34d399);
+      box-shadow: 0 0 8px rgba(16, 185, 129, 0.45);
+    }
+
+    /* Badge styles */
+    .skill-badge {
+      font-family: var(--font-mono, monospace);
+      font-size: 10px;
+      line-height: 1;
+      padding: 3px 7px;
+      border-radius: 4px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Amber Tiers */
+    .badge-amber-applied {
+      background: rgba(var(--accent-rgb), 0.06);
+      color: var(--muted);
+      border: 1px solid rgba(var(--accent-rgb), 0.15);
+    }
+
+    .badge-amber-proficient {
+      background: rgba(var(--accent-rgb), 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(var(--accent-rgb), 0.25);
+    }
+
+    .badge-amber-advanced {
+      background: rgba(var(--accent-rgb), 0.16);
+      color: var(--accent);
+      border: 1px solid rgba(var(--accent-rgb), 0.4);
+      box-shadow: 0 0 8px rgba(var(--accent-rgb), 0.15);
+    }
+
+    .badge-amber-expert {
+      background: rgba(var(--accent-rgb), 0.22);
+      color: var(--accent);
+      border: 1px solid rgba(var(--accent-rgb), 0.6);
+      box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.3);
+    }
+
+    /* Cyan Tiers */
+    .badge-cyan-applied {
+      background: rgba(var(--accent-2-rgb), 0.06);
+      color: var(--muted);
+      border: 1px solid rgba(var(--accent-2-rgb), 0.15);
+    }
+
+    .badge-cyan-proficient {
+      background: rgba(var(--accent-2-rgb), 0.1);
+      color: var(--accent-2);
+      border: 1px solid rgba(var(--accent-2-rgb), 0.25);
+    }
+
+    .badge-cyan-advanced {
+      background: rgba(var(--accent-2-rgb), 0.16);
+      color: var(--accent-2);
+      border: 1px solid rgba(var(--accent-2-rgb), 0.4);
+      box-shadow: 0 0 8px rgba(var(--accent-2-rgb), 0.15);
+    }
+
+    .badge-cyan-proven {
+      background: rgba(var(--accent-2-rgb), 0.22);
+      color: var(--accent-2);
+      border: 1px solid rgba(var(--accent-2-rgb), 0.6);
+      box-shadow: 0 0 10px rgba(var(--accent-2-rgb), 0.3);
+    }
+
+    /* Emerald Certified */
+    .badge-emerald-certified {
+      background: rgba(16, 185, 129, 0.15);
+      color: #10b981;
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.25);
     }
 
     @media (max-width: 768px) {
@@ -2135,16 +2221,39 @@
   <!-- Skills & Capabilities Section -->
   <section class="py-24 md:py-32 px-6" id="skills">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-        <div class="font-mono text-xs uppercase tracking-widest mb-3" style="color: var(--accent);">// 04. Technical
-          Toolkit</div>
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+        <div class="font-mono text-xs uppercase tracking-widest mb-3" style="color: var(--accent);">// 04. Technical Toolkit</div>
         <h2 class="font-display font-black text-4xl md:text-6xl mb-6" style="letter-spacing: -0.03em;">
-          Skills & <span style="font-style: italic; font-weight: 400;">Competencies</span>
+          Skills &amp; <span style="font-style: italic; font-weight: 400;">Competencies</span>
         </h2>
-        <p class="text-base" style="color: var(--muted);">
-          A comprehensive skill matrix developed through academic rigors at UNIKOM, real client systems, and accredited
-          national certifications.
+        <p class="text-base mb-6" style="color: var(--muted);">
+          A comprehensive skill matrix developed through academic rigors at UNIKOM, real client systems, and accredited national certifications.
         </p>
+
+        <!-- Visual Proficiency Scale Legend -->
+        <div class="inline-flex flex-wrap items-center justify-center gap-3 sm:gap-5 px-5 py-2.5 rounded-full border text-xs font-mono"
+          style="background: var(--card); border-color: var(--border);">
+          <span class="text-muted text-[11px] uppercase tracking-wider font-semibold">Proficiency Scale:</span>
+          <div class="flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full" style="background: rgba(255, 255, 255, 0.25);"></span>
+            <span class="text-muted">Applied (L1)</span>
+          </div>
+          <span class="text-border-strong opacity-40">•</span>
+          <div class="flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full" style="background: rgba(var(--accent-rgb), 0.5);"></span>
+            <span class="text-muted">Proficient (L2)</span>
+          </div>
+          <span class="text-border-strong opacity-40">•</span>
+          <div class="flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full" style="background: var(--accent);"></span>
+            <span class="text-fg font-medium">Advanced (L3)</span>
+          </div>
+          <span class="text-border-strong opacity-40">•</span>
+          <div class="flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full" style="background: var(--accent); box-shadow: 0 0 8px var(--accent);"></span>
+            <span class="text-accent font-bold">Expert (L4)</span>
+          </div>
+        </div>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -2164,64 +2273,82 @@
             </p>
           </div>
 
-          <div class="space-y-3.5 font-mono text-xs">
-            <div class="space-y-1.5">
+          <div class="space-y-3 font-mono text-xs">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">PHP &amp; Laravel</span>
-                <span class="text-accent font-semibold tracking-wider">92%</span>
+                <span class="skill-badge badge-amber-advanced">Advanced</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-amber" style="width: 92%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">React &amp; Next.js</span>
-                <span class="text-accent font-semibold tracking-wider">86%</span>
+                <span class="skill-badge badge-amber-proficient">Proficient</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-amber" style="width: 86%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">JavaScript (ES6+)</span>
-                <span class="text-accent font-semibold tracking-wider">88%</span>
+                <span class="skill-badge badge-amber-proficient">Proficient</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-amber" style="width: 88%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">HTML5 &amp; CSS3</span>
-                <span class="text-accent font-semibold tracking-wider">96%</span>
+                <span class="skill-badge badge-amber-expert"><i class="fas fa-bolt text-[8px]"></i> Expert</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-amber" style="width: 96%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Tailwind CSS</span>
-                <span class="text-accent font-semibold tracking-wider">94%</span>
+                <span class="skill-badge badge-amber-expert"><i class="fas fa-bolt text-[8px]"></i> Expert</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-amber" style="width: 94%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">RESTful APIs</span>
-                <span class="text-accent font-semibold tracking-wider">85%</span>
+                <span class="skill-badge badge-amber-applied">Applied</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-amber" style="width: 85%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
           </div>
@@ -2242,64 +2369,82 @@
             </p>
           </div>
 
-          <div class="space-y-3.5 font-mono text-xs">
-            <div class="space-y-1.5">
+          <div class="space-y-3 font-mono text-xs">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">BNSP Data Analyst</span>
-                <span class="text-accent-2 font-semibold tracking-wider">95%</span>
+                <span class="skill-badge badge-emerald-certified"><i class="fas fa-certificate text-[8px]"></i> Certified</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-cyan" style="width: 95%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-emerald"></div>
+                <div class="skill-tier-seg active-emerald"></div>
+                <div class="skill-tier-seg active-emerald"></div>
+                <div class="skill-tier-seg active-emerald"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Python (Pandas / NumPy)</span>
-                <span class="text-accent-2 font-semibold tracking-wider">88%</span>
+                <span class="skill-badge badge-cyan-proficient">Proficient</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-cyan" style="width: 88%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Data Cleaning &amp; EDA</span>
-                <span class="text-accent-2 font-semibold tracking-wider">90%</span>
+                <span class="skill-badge badge-cyan-proficient">Proficient</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-cyan" style="width: 90%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Power BI Dashboards</span>
-                <span class="text-accent-2 font-semibold tracking-wider">84%</span>
+                <span class="skill-badge badge-cyan-applied">Applied</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-cyan" style="width: 84%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Tableau Visualization</span>
-                <span class="text-accent-2 font-semibold tracking-wider">82%</span>
+                <span class="skill-badge badge-cyan-applied">Applied</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-cyan" style="width: 82%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Advanced SQL Analytics</span>
-                <span class="text-accent-2 font-semibold tracking-wider">92%</span>
+                <span class="skill-badge badge-cyan-advanced">Advanced</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-cyan" style="width: 92%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
           </div>
@@ -2319,64 +2464,82 @@
             </p>
           </div>
 
-          <div class="space-y-3.5 font-mono text-xs">
-            <div class="space-y-1.5">
+          <div class="space-y-3 font-mono text-xs">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">MySQL / MariaDB</span>
-                <span class="text-accent font-semibold tracking-wider">92%</span>
+                <span class="skill-badge badge-amber-advanced">Advanced</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-amber" style="width: 92%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Database Design (3NF)</span>
-                <span class="text-accent font-semibold tracking-wider">90%</span>
+                <span class="skill-badge badge-amber-advanced">Advanced</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-amber" style="width: 90%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Systems Analysis (SAD)</span>
-                <span class="text-accent font-semibold tracking-wider">95%</span>
+                <span class="skill-badge badge-amber-expert"><i class="fas fa-bolt text-[8px]"></i> Expert</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-amber" style="width: 95%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">DFD &amp; UML Modeling</span>
-                <span class="text-accent font-semibold tracking-wider">86%</span>
+                <span class="skill-badge badge-amber-proficient">Proficient</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-amber" style="width: 86%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Git &amp; GitHub Flow</span>
-                <span class="text-accent font-semibold tracking-wider">88%</span>
+                <span class="skill-badge badge-amber-proficient">Proficient</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-amber" style="width: 88%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">System QA &amp; Testing</span>
-                <span class="text-accent font-semibold tracking-wider">84%</span>
+                <span class="skill-badge badge-amber-applied">Applied</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-amber" style="width: 84%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-amber"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
           </div>
@@ -2397,64 +2560,82 @@
             </p>
           </div>
 
-          <div class="space-y-3.5 font-mono text-xs">
-            <div class="space-y-1.5">
+          <div class="space-y-3 font-mono text-xs">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Executive Leadership</span>
-                <span class="text-accent-2 font-semibold tracking-wider">96%</span>
+                <span class="skill-badge badge-cyan-proven"><i class="fas fa-award text-[8px]"></i> Proven</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-cyan" style="width: 96%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Cross-Functional Teamwork</span>
-                <span class="text-accent-2 font-semibold tracking-wider">94%</span>
+                <span class="skill-badge badge-cyan-proven"><i class="fas fa-award text-[8px]"></i> Proven</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-cyan" style="width: 94%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Strategic Project Mgmt</span>
-                <span class="text-accent-2 font-semibold tracking-wider">88%</span>
+                <span class="skill-badge badge-cyan-proficient">Proficient</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-cyan" style="width: 88%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Critical Thinking</span>
-                <span class="text-accent-2 font-semibold tracking-wider">92%</span>
+                <span class="skill-badge badge-cyan-advanced">Advanced</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-cyan" style="width: 92%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Public Speaking</span>
-                <span class="text-accent-2 font-semibold tracking-wider">88%</span>
+                <span class="skill-badge badge-cyan-proficient">Proficient</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-cyan" style="width: 88%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
 
-            <div class="space-y-1.5">
+            <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-fg font-medium">Analytical Problem Solving</span>
-                <span class="text-accent-2 font-semibold tracking-wider">94%</span>
+                <span class="skill-badge badge-cyan-advanced">Advanced</span>
               </div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill-cyan" style="width: 94%;"></div>
+              <div class="skill-tier-meter">
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg active-cyan"></div>
+                <div class="skill-tier-seg"></div>
               </div>
             </div>
           </div>
