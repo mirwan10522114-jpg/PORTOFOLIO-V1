@@ -185,6 +185,7 @@ PORTOFOLIO/
 │       ├── logo-cisco-ccna.png            # Cisco Networking Academy badge
 │       ├── logo-banksampah.png            # Bank Sampah Sukamaju Sejahtera insignia
 │       ├── logo-disdikkbb.png             # Dinas Pendidikan Kab. Bandung Barat crest
+│       ├── logo-himasi.png                # Himpunan Mahasiswa Sistem Informasi UNIKOM emblem
 │       ├── project-wastebank.png          # Waste Bank platform preview screenshot
 │       ├── project-petadik.png            # PETADIK Disdik KBB UI preview screenshot
 │       ├── project-kipan.png              # SIM KIPAN member portal preview
