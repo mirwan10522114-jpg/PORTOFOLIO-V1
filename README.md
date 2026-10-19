@@ -173,6 +173,8 @@ Dev Tools       : Git, GitHub, Laragon, VS Code, Postman, Vite, Composer, npm
 PORTOFOLIO/
 ├── assets/
 │   └── images/
+│       ├── profile-mirwan.jpg             # Official formal portrait photo
+│       ├── profile-mirwan.png             # Official portrait photo (PNG format)
 │       ├── cert-bnsp.png                  # Full-res BNSP Data Analyst certificate scan
 │       ├── cert-ibm.png                   # Full-res IBM SkillsBuild certificate scan
 │       ├── cert-cisco-srwe.png            # Full-res Cisco CCNA SRWE certificate scan

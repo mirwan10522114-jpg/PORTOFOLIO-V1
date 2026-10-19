@@ -637,6 +637,100 @@ body.theme-anim *::after {
   box-shadow: 0 0 15px rgba(var(--accent-rgb), 0.4);
 }
 
+/* === HERO PROFILE PORTRAIT FRAME === */
+.hero-portrait-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+.hero-portrait-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5), 0 0 30px -5px var(--glow);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: visible;
+}
+.hero-portrait-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.6), 0 0 40px -2px var(--glow);
+}
+.hero-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  z-index: 25;
+  transition: all 0.3s ease;
+}
+.hero-corner-tl { top: -2px; left: -2px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); border-top-left-radius: 6px; }
+.hero-corner-tr { top: -2px; right: -2px; border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); border-top-right-radius: 6px; }
+.hero-corner-bl { bottom: -2px; left: -2px; border-bottom: 2px solid var(--accent); border-left: 2px solid var(--accent); border-bottom-left-radius: 6px; }
+.hero-corner-br { bottom: -2px; right: -2px; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); border-bottom-right-radius: 6px; }
+.hero-portrait-card:hover .hero-corner {
+  width: 20px;
+  height: 20px;
+}
+.hero-portrait-img-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-elev-2);
+}
+.hero-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero-portrait-card:hover .hero-portrait-img {
+  transform: scale(1.04);
+}
+.hero-ambient-glow {
+  position: absolute;
+  inset: -15px;
+  border-radius: 30px;
+  background: radial-gradient(circle at 60% 40%, rgba(var(--accent-rgb), 0.22), rgba(var(--accent-2-rgb), 0.14) 50%, transparent 75%);
+  filter: blur(28px);
+  opacity: 0.8;
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+.hero-portrait-wrap:hover .hero-ambient-glow {
+  opacity: 1;
+}
+.hero-floating-chip {
+  position: absolute;
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+  z-index: 30;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--fg);
+}
+.hero-floating-chip:hover {
+  transform: translateY(-2px) scale(1.04);
+  border-color: var(--accent);
+  box-shadow: 0 14px 30px -5px rgba(0, 0, 0, 0.45), 0 0 15px var(--glow);
+}
+
 @media (max-width: 768px) {
   .article-card { padding: 22px; }
   .card-num { font-size: 40px !important; }
@@ -694,75 +788,168 @@ body.theme-anim *::after {
   <div class="mouse-glow" id="mouseGlow"></div>
   
   <div class="relative max-w-7xl mx-auto px-6 w-full" style="z-index: 2;">
-    <div class="max-w-5xl">
-      <!-- Status pill -->
-      <div class="flex items-center gap-3 mb-6 font-mono text-xs flex-wrap" style="color: var(--muted);">
-        <span class="tag">Information Systems Graduate</span>
-        <span>·</span>
-        <span class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-amber-500"></i> Bandung Barat, Jawa Barat</span>
-        <span>·</span>
-        <span class="flex items-center gap-2">
-          <span class="stat-dot"></span> Open to Full-Stack & Systems Roles
-        </span>
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-center">
+      
+      <!-- Left Column: Intro, Titles, Bio, CTAs, Stats -->
+      <div class="lg:col-span-7 xl:col-span-7">
+        <!-- Status pill -->
+        <div class="flex items-center gap-3 mb-6 font-mono text-xs flex-wrap" style="color: var(--muted);">
+          <span class="tag">Information Systems Graduate</span>
+          <span>·</span>
+          <span class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-amber-500"></i> Bandung Barat, Jawa Barat</span>
+          <span>·</span>
+          <span class="flex items-center gap-2">
+            <span class="stat-dot"></span> Open to Full-Stack & Systems Roles
+          </span>
+        </div>
+        
+        <!-- Typewriter greeting -->
+        <h1 class="font-mono font-bold mb-6" style="font-size: clamp(2.3rem, 5.4vw, 4.8rem); line-height: 1.08; letter-spacing: -0.04em;">
+          <span style="color: var(--muted);">$</span> <span id="typewriter" class="cursor"></span>
+        </h1>
+        
+        <!-- Subtitle -->
+        <p class="font-display text-xl sm:text-2xl md:text-3xl mb-5 tracking-wide" style="font-style: italic; font-weight: 400; color: var(--fg); line-height: 1.35;">
+          FULL STACK WEB DEVELOPER <span style="color: var(--accent); font-style: normal;">|</span> DATA ANALYST
+        </p>
+        
+        <p class="text-base md:text-lg mb-8 max-w-2xl" style="color: var(--muted); line-height: 1.7;">
+          Hello, I'm <span style="color: var(--fg); font-weight: 600;">Mirwan Kholid</span> — an Information Systems graduate from <span style="color: var(--fg); font-weight: 500;">Universitas Komputer Indonesia (UNIKOM)</span> (GPA: <span style="color: var(--accent); font-weight: 600;">3.68/4.00</span>). Practical experience across full-stack web engineering (PHP, Laravel, MySQL, JavaScript), systems analysis, database design, and certified data analytics.
+        </p>
+        
+        <!-- CTAs & Direct Links -->
+        <div class="flex flex-wrap items-center gap-3 mb-10">
+          <a href="#projects" class="btn-primary">
+            Explore Projects
+            <i class="fas fa-arrow-down text-xs"></i>
+          </a>
+          <a href="https://github.com/mirwan10522114-jpg" target="_blank" rel="noopener" class="btn-secondary">
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+          <a href="https://wa.me/6281211547844?text=Halo%20Mirwan,%20saya%20melihat%20portofolio%20Anda%20dan%20ingin%20berdiskusi" target="_blank" rel="noopener" class="btn-secondary">
+            <i class="fab fa-whatsapp text-emerald-500"></i>
+            WhatsApp Me
+          </a>
+          <a href="https://linkedin.com/in/mirwan-kholid-902038362/" target="_blank" rel="noopener" class="btn-secondary">
+            <i class="fab fa-linkedin-in text-blue-500"></i>
+            LinkedIn
+          </a>
+          <a href="mailto:mirwankholid06@gmail.com" class="btn-secondary">
+            <i class="fas fa-envelope text-amber-500"></i>
+            mirwankholid06@gmail.com
+          </a>
+        </div>
+        
+        <!-- Stats grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 rounded-lg border max-w-2xl" style="background: var(--bg-elev); border-color: var(--border);">
+          <div>
+            <div class="font-mono font-bold text-2xl lg:text-3xl" style="color: var(--accent);">3.68</div>
+            <div class="font-mono text-[11px] uppercase tracking-wider mt-1" style="color: var(--muted);">UNIKOM GPA</div>
+          </div>
+          <div>
+            <div class="font-mono font-bold text-2xl lg:text-3xl" style="color: var(--accent);">6+</div>
+            <div class="font-mono text-[11px] uppercase tracking-wider mt-1" style="color: var(--muted);">Systems Built</div>
+          </div>
+          <div>
+            <div class="font-mono font-bold text-2xl lg:text-3xl" style="color: var(--accent-2);">4</div>
+            <div class="font-mono text-[11px] uppercase tracking-wider mt-1" style="color: var(--muted);">Verified Certs</div>
+          </div>
+          <div>
+            <div class="font-mono font-bold text-2xl lg:text-3xl" style="color: var(--accent);">4+</div>
+            <div class="font-mono text-[11px] uppercase tracking-wider mt-1" style="color: var(--muted);">Leadership Roles</div>
+          </div>
+        </div>
       </div>
-      
-      <!-- Typewriter greeting -->
-      <h1 class="font-mono font-bold mb-6" style="font-size: clamp(2.4rem, 6.5vw, 5.8rem); line-height: 1.05; letter-spacing: -0.04em;">
-        <span style="color: var(--muted);">$</span> <span id="typewriter" class="cursor"></span>
-      </h1>
-      
-      <!-- Subtitle -->
-      <p class="font-display text-2xl md:text-3xl mb-5 tracking-wide" style="font-style: italic; font-weight: 400; color: var(--fg); line-height: 1.35;">
-        FULL STACK WEB DEVELOPER <span style="color: var(--accent); font-style: normal;">|</span> DATA ANALYST
-      </p>
-      
-      <p class="text-base md:text-lg mb-10 max-w-3xl" style="color: var(--muted); line-height: 1.7;">
-        Hello, I'm <span style="color: var(--fg); font-weight: 600;">Mirwan Kholid</span> — an Information Systems graduate from <span style="color: var(--fg); font-weight: 500;">Universitas Komputer Indonesia (UNIKOM)</span> (GPA: <span style="color: var(--accent); font-weight: 600;">3.68/4.00</span>). Practical experience across full-stack web engineering (PHP, Laravel, MySQL, JavaScript), systems analysis, database design, and certified data analytics.
-      </p>
-      
-      <!-- CTAs & Direct Links -->
-      <div class="flex flex-wrap items-center gap-4 mb-16">
-        <a href="#projects" class="btn-primary">
-          Explore Projects
-          <i class="fas fa-arrow-down text-xs"></i>
-        </a>
-        <a href="https://github.com/mirwan10522114-jpg" target="_blank" rel="noopener" class="btn-secondary">
-          <i class="fab fa-github"></i>
-          GitHub
-        </a>
-        <a href="https://wa.me/6281211547844?text=Halo%20Mirwan,%20saya%20melihat%20portofolio%20Anda%20dan%20ingin%20berdiskusi" target="_blank" rel="noopener" class="btn-secondary">
-          <i class="fab fa-whatsapp text-emerald-500"></i>
-          WhatsApp Me
-        </a>
-        <a href="https://linkedin.com/in/mirwan-kholid-902038362/" target="_blank" rel="noopener" class="btn-secondary">
-          <i class="fab fa-linkedin-in text-blue-500"></i>
-          LinkedIn
-        </a>
-        <a href="mailto:mirwankholid06@gmail.com" class="btn-secondary">
-          <i class="fas fa-envelope text-amber-500"></i>
-          mirwankholid06@gmail.com
-        </a>
+
+      <!-- Right Column: Profile Portrait with Matching Elements & Cyber HUD Framing -->
+      <div class="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end mt-8 lg:mt-0">
+        <div class="hero-portrait-wrap">
+          <!-- Ambient Glow Background -->
+          <div class="hero-ambient-glow"></div>
+
+          <!-- Top-Right Floating Badge: UNIKOM Honors -->
+          <div class="hero-floating-chip -top-5 -right-2 sm:-right-4">
+            <img src="assets/images/logo-unikom.png" alt="Logo UNIKOM" class="w-4 h-4 object-contain" />
+            <span><strong class="text-accent font-semibold">S.SI</strong> · UNIKOM (3.68)</span>
+          </div>
+
+          <!-- Bottom-Left Floating Badge: BNSP Certified -->
+          <div class="hero-floating-chip -bottom-4 -left-2 sm:-left-4">
+            <span class="inline-flex items-center justify-center bg-white rounded px-1 py-0.5 shadow-xs">
+              <img src="assets/images/logo-bnsp.png" alt="BNSP" class="h-3 w-auto object-contain" />
+            </span>
+            <span><strong class="text-emerald-400 font-semibold">BNSP</strong> Data Analyst</span>
+          </div>
+
+          <!-- Main Portrait Card -->
+          <div class="hero-portrait-card">
+            <!-- 4 Corner Tech Reticle Markers -->
+            <div class="hero-corner hero-corner-tl"></div>
+            <div class="hero-corner hero-corner-tr"></div>
+            <div class="hero-corner hero-corner-bl"></div>
+            <div class="hero-corner hero-corner-br"></div>
+
+            <!-- Terminal / HUD Window Header -->
+            <div class="flex items-center justify-between pb-3 mb-3 border-b font-mono text-xs" style="border-color: var(--border);">
+              <div class="flex items-center gap-2">
+                <span class="flex h-2 w-2 relative">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background: var(--accent);"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2" style="background: var(--accent);"></span>
+                </span>
+                <span class="font-semibold tracking-wider text-[11px]" style="color: var(--fg);">mirwan_kholid.s_si</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[10px] uppercase tracking-widest px-2 py-0.5 rounded bg-amber-500/10 text-amber-500 border border-amber-500/20 font-semibold">
+                <i class="fas fa-terminal text-[8px]"></i>
+                <span>DEV_ONLINE</span>
+              </div>
+            </div>
+
+            <!-- Photo Container -->
+            <div class="hero-portrait-img-box">
+              <img src="assets/images/profile-mirwan.jpg" alt="Mirwan Kholid, S.SI — Full-Stack Web Developer & Data Analyst" class="hero-portrait-img" loading="eager" />
+              
+              <!-- Subtle vignette at bottom -->
+              <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/85 via-black/45 to-transparent pointer-events-none z-10"></div>
+              
+              <!-- Grid overlay (technical texture matching background grid) -->
+              <div class="absolute inset-0 bg-grid opacity-15 pointer-events-none z-10"></div>
+
+              <!-- Tech Crosshairs in image corners -->
+              <div class="absolute top-2.5 left-2.5 font-mono text-[9px] text-white/50 z-20 pointer-events-none select-none">+ 01</div>
+              <div class="absolute top-2.5 right-2.5 font-mono text-[9px] text-white/50 z-20 pointer-events-none select-none">[RAW]</div>
+
+              <!-- Bottom overlay badge inside image -->
+              <div class="absolute bottom-3 left-3 right-3 z-20 flex items-end justify-between font-mono text-[11px] text-white/95">
+                <div>
+                  <div class="font-bold text-sm text-white tracking-wide flex items-center gap-1.5">
+                    <span>Mirwan Kholid</span>
+                    <i class="fas fa-check-circle text-emerald-400 text-xs" title="Verified Professional"></i>
+                  </div>
+                  <div class="text-[10px] text-amber-400 font-mono tracking-wider">FULL-STACK &bull; DATA ANALYST</div>
+                </div>
+                <div class="text-right text-[10px] text-cyan-300 font-mono">
+                  <div>Bandung Barat</div>
+                  <div class="text-white/70">ID &bull; 2026</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Frame Footer Bar -->
+            <div class="pt-3 mt-3 border-t flex items-center justify-between font-mono text-[11px]" style="border-color: var(--border); color: var(--muted);">
+              <div class="flex items-center gap-1.5">
+                <i class="fas fa-layer-group text-[10px]" style="color: var(--accent);"></i>
+                <span class="truncate max-w-[130px] sm:max-w-none">Laravel / Next / MySQL</span>
+              </div>
+              <div class="flex items-center gap-1.5" style="color: var(--accent-2);">
+                <i class="fas fa-certificate text-[10px]"></i>
+                <span>BNSP &bull; CISCO &bull; IBM</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <!-- Stats grid -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl p-6 rounded-lg border" style="background: var(--bg-elev); border-color: var(--border);">
-        <div>
-          <div class="font-mono font-bold text-3xl md:text-4xl" style="color: var(--accent);">3.68</div>
-          <div class="font-mono text-xs uppercase tracking-wider mt-1" style="color: var(--muted);">UNIKOM GPA (Honors)</div>
-        </div>
-        <div>
-          <div class="font-mono font-bold text-3xl md:text-4xl" style="color: var(--accent);">6+</div>
-          <div class="font-mono text-xs uppercase tracking-wider mt-1" style="color: var(--muted);">Systems Built</div>
-        </div>
-        <div>
-          <div class="font-mono font-bold text-3xl md:text-4xl" style="color: var(--accent-2);">4</div>
-          <div class="font-mono text-xs uppercase tracking-wider mt-1" style="color: var(--muted);">National / Global Certs</div>
-        </div>
-        <div>
-          <div class="font-mono font-bold text-3xl md:text-4xl" style="color: var(--accent);">4+</div>
-          <div class="font-mono text-xs uppercase tracking-wider mt-1" style="color: var(--muted);">Leadership Tenures</div>
-        </div>
-      </div>
+
     </div>
   </div>
   
