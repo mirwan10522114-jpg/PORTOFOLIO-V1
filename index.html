@@ -641,44 +641,49 @@ body.theme-anim *::after {
 .hero-portrait-wrap {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 250px;
+}
+@media (min-width: 1280px) {
+  .hero-portrait-wrap {
+    max-width: 270px;
+  }
 }
 .hero-portrait-card {
   position: relative;
   background: var(--card);
   border: 1px solid var(--border-strong);
-  border-radius: 20px;
-  padding: 16px;
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5), 0 0 30px -5px var(--glow);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.45), 0 0 20px -4px var(--glow);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: visible;
 }
 .hero-portrait-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   border-color: var(--accent);
-  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.6), 0 0 40px -2px var(--glow);
+  box-shadow: 0 22px 45px -10px rgba(0, 0, 0, 0.55), 0 0 28px -2px var(--glow);
 }
 .hero-corner {
   position: absolute;
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
   pointer-events: none;
   z-index: 25;
   transition: all 0.3s ease;
 }
-.hero-corner-tl { top: -2px; left: -2px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); border-top-left-radius: 6px; }
-.hero-corner-tr { top: -2px; right: -2px; border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); border-top-right-radius: 6px; }
-.hero-corner-bl { bottom: -2px; left: -2px; border-bottom: 2px solid var(--accent); border-left: 2px solid var(--accent); border-bottom-left-radius: 6px; }
-.hero-corner-br { bottom: -2px; right: -2px; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); border-bottom-right-radius: 6px; }
+.hero-corner-tl { top: -2px; left: -2px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); border-top-left-radius: 4px; }
+.hero-corner-tr { top: -2px; right: -2px; border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); border-top-right-radius: 4px; }
+.hero-corner-bl { bottom: -2px; left: -2px; border-bottom: 2px solid var(--accent); border-left: 2px solid var(--accent); border-bottom-left-radius: 4px; }
+.hero-corner-br { bottom: -2px; right: -2px; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); border-bottom-right-radius: 4px; }
 .hero-portrait-card:hover .hero-corner {
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
 }
 .hero-portrait-img-box {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5;
-  border-radius: 14px;
+  aspect-ratio: 1 / 1.08;
+  border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg-elev-2);
@@ -687,7 +692,7 @@ body.theme-anim *::after {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 12%;
+  object-position: center 10%;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-portrait-card:hover .hero-portrait-img {
@@ -695,14 +700,14 @@ body.theme-anim *::after {
 }
 .hero-ambient-glow {
   position: absolute;
-  inset: -15px;
-  border-radius: 30px;
-  background: radial-gradient(circle at 60% 40%, rgba(var(--accent-rgb), 0.22), rgba(var(--accent-2-rgb), 0.14) 50%, transparent 75%);
-  filter: blur(28px);
-  opacity: 0.8;
+  inset: -8px;
+  border-radius: 20px;
+  background: radial-gradient(circle at 60% 40%, rgba(var(--accent-rgb), 0.18), rgba(var(--accent-2-rgb), 0.1) 50%, transparent 75%);
+  filter: blur(18px);
+  opacity: 0.7;
   z-index: -1;
   pointer-events: none;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.4s ease;
 }
 .hero-portrait-wrap:hover .hero-ambient-glow {
   opacity: 1;
@@ -714,21 +719,22 @@ body.theme-anim *::after {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 999px;
-  padding: 8px 14px;
+  padding: 4px 9px;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  font-size: 10px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+  gap: 5px;
+  box-shadow: 0 6px 16px -3px rgba(0, 0, 0, 0.35);
   z-index: 30;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--fg);
+  white-space: nowrap;
 }
 .hero-floating-chip:hover {
   transform: translateY(-2px) scale(1.04);
   border-color: var(--accent);
-  box-shadow: 0 14px 30px -5px rgba(0, 0, 0, 0.45), 0 0 15px var(--glow);
+  box-shadow: 0 8px 20px -3px rgba(0, 0, 0, 0.45), 0 0 10px var(--glow);
 }
 
 @media (max-width: 768px) {
@@ -788,10 +794,10 @@ body.theme-anim *::after {
   <div class="mouse-glow" id="mouseGlow"></div>
   
   <div class="relative max-w-7xl mx-auto px-6 w-full" style="z-index: 2;">
-    <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-center">
+    <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
       
       <!-- Left Column: Intro, Titles, Bio, CTAs, Stats -->
-      <div class="lg:col-span-7 xl:col-span-7">
+      <div class="lg:col-span-7 xl:col-span-8">
         <!-- Status pill -->
         <div class="flex items-center gap-3 mb-6 font-mono text-xs flex-wrap" style="color: var(--muted);">
           <span class="tag">Information Systems Graduate</span>
@@ -863,21 +869,21 @@ body.theme-anim *::after {
       </div>
 
       <!-- Right Column: Profile Portrait with Matching Elements & Cyber HUD Framing -->
-      <div class="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end mt-8 lg:mt-0">
+      <div class="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end mt-8 lg:mt-0">
         <div class="hero-portrait-wrap">
           <!-- Ambient Glow Background -->
           <div class="hero-ambient-glow"></div>
 
           <!-- Top-Right Floating Badge: UNIKOM Honors -->
-          <div class="hero-floating-chip -top-5 -right-2 sm:-right-4">
-            <img src="assets/images/logo-unikom.png" alt="Logo UNIKOM" class="w-4 h-4 object-contain" />
-            <span><strong class="text-accent font-semibold">S.SI</strong> · UNIKOM (3.68)</span>
+          <div class="hero-floating-chip -top-3 -right-2">
+            <img src="assets/images/logo-unikom.png" alt="Logo UNIKOM" class="w-3.5 h-3.5 object-contain" />
+            <span><strong class="text-accent font-semibold">S.SI</strong> · UNIKOM</span>
           </div>
 
           <!-- Bottom-Left Floating Badge: BNSP Certified -->
-          <div class="hero-floating-chip -bottom-4 -left-2 sm:-left-4">
+          <div class="hero-floating-chip -bottom-3 -left-2">
             <span class="inline-flex items-center justify-center bg-white rounded px-1 py-0.5 shadow-xs">
-              <img src="assets/images/logo-bnsp.png" alt="BNSP" class="h-3 w-auto object-contain" />
+              <img src="assets/images/logo-bnsp.png" alt="BNSP" class="h-2.5 w-auto object-contain" />
             </span>
             <span><strong class="text-emerald-400 font-semibold">BNSP</strong> Data Analyst</span>
           </div>
@@ -891,17 +897,17 @@ body.theme-anim *::after {
             <div class="hero-corner hero-corner-br"></div>
 
             <!-- Terminal / HUD Window Header -->
-            <div class="flex items-center justify-between pb-3 mb-3 border-b font-mono text-xs" style="border-color: var(--border);">
-              <div class="flex items-center gap-2">
-                <span class="flex h-2 w-2 relative">
+            <div class="flex items-center justify-between pb-2 mb-2 border-b font-mono text-[10px]" style="border-color: var(--border);">
+              <div class="flex items-center gap-1.5">
+                <span class="flex h-1.5 w-1.5 relative">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background: var(--accent);"></span>
-                  <span class="relative inline-flex rounded-full h-2 w-2" style="background: var(--accent);"></span>
+                  <span class="relative inline-flex rounded-full h-1.5 w-1.5" style="background: var(--accent);"></span>
                 </span>
-                <span class="font-semibold tracking-wider text-[11px]" style="color: var(--fg);">mirwan_kholid.s_si</span>
+                <span class="font-semibold tracking-wider text-[10px]" style="color: var(--fg);">mirwan_kholid.s_si</span>
               </div>
-              <div class="flex items-center gap-1.5 text-[10px] uppercase tracking-widest px-2 py-0.5 rounded bg-amber-500/10 text-amber-500 border border-amber-500/20 font-semibold">
-                <i class="fas fa-terminal text-[8px]"></i>
-                <span>DEV_ONLINE</span>
+              <div class="flex items-center gap-1 text-[9px] uppercase tracking-widest px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-500 border border-amber-500/20 font-semibold">
+                <i class="fas fa-terminal text-[7px]"></i>
+                <span>ONLINE</span>
               </div>
             </div>
 
@@ -910,40 +916,40 @@ body.theme-anim *::after {
               <img src="assets/images/profile-mirwan.jpg" alt="Mirwan Kholid, S.SI — Full-Stack Web Developer & Data Analyst" class="hero-portrait-img" loading="eager" />
               
               <!-- Subtle vignette at bottom -->
-              <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/85 via-black/45 to-transparent pointer-events-none z-10"></div>
+              <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none z-10"></div>
               
               <!-- Grid overlay (technical texture matching background grid) -->
               <div class="absolute inset-0 bg-grid opacity-15 pointer-events-none z-10"></div>
 
               <!-- Tech Crosshairs in image corners -->
-              <div class="absolute top-2.5 left-2.5 font-mono text-[9px] text-white/50 z-20 pointer-events-none select-none">+ 01</div>
-              <div class="absolute top-2.5 right-2.5 font-mono text-[9px] text-white/50 z-20 pointer-events-none select-none">[RAW]</div>
+              <div class="absolute top-2 left-2 font-mono text-[8px] text-white/50 z-20 pointer-events-none select-none">+ 01</div>
+              <div class="absolute top-2 right-2 font-mono text-[8px] text-white/50 z-20 pointer-events-none select-none">[RAW]</div>
 
               <!-- Bottom overlay badge inside image -->
-              <div class="absolute bottom-3 left-3 right-3 z-20 flex items-end justify-between font-mono text-[11px] text-white/95">
+              <div class="absolute bottom-2 left-2 right-2 z-20 flex items-end justify-between font-mono text-[10px] text-white/95">
                 <div>
-                  <div class="font-bold text-sm text-white tracking-wide flex items-center gap-1.5">
+                  <div class="font-bold text-xs text-white tracking-wide flex items-center gap-1">
                     <span>Mirwan Kholid</span>
-                    <i class="fas fa-check-circle text-emerald-400 text-xs" title="Verified Professional"></i>
+                    <i class="fas fa-check-circle text-emerald-400 text-[10px]" title="Verified Professional"></i>
                   </div>
-                  <div class="text-[10px] text-amber-400 font-mono tracking-wider">FULL-STACK &bull; DATA ANALYST</div>
+                  <div class="text-[9px] text-amber-400 font-mono tracking-wider">FULL-STACK &bull; DATA ANALYST</div>
                 </div>
-                <div class="text-right text-[10px] text-cyan-300 font-mono">
+                <div class="text-right text-[9px] text-cyan-300 font-mono">
                   <div>Bandung Barat</div>
-                  <div class="text-white/70">ID &bull; 2026</div>
+                  <div class="text-white/70">GPA 3.68</div>
                 </div>
               </div>
             </div>
 
             <!-- Frame Footer Bar -->
-            <div class="pt-3 mt-3 border-t flex items-center justify-between font-mono text-[11px]" style="border-color: var(--border); color: var(--muted);">
-              <div class="flex items-center gap-1.5">
-                <i class="fas fa-layer-group text-[10px]" style="color: var(--accent);"></i>
-                <span class="truncate max-w-[130px] sm:max-w-none">Laravel / Next / MySQL</span>
+            <div class="pt-2 mt-2 border-t flex items-center justify-between font-mono text-[10px]" style="border-color: var(--border); color: var(--muted);">
+              <div class="flex items-center gap-1">
+                <i class="fas fa-layer-group text-[9px]" style="color: var(--accent);"></i>
+                <span class="truncate max-w-[110px] sm:max-w-none">Laravel / Next / MySQL</span>
               </div>
-              <div class="flex items-center gap-1.5" style="color: var(--accent-2);">
-                <i class="fas fa-certificate text-[10px]"></i>
-                <span>BNSP &bull; CISCO &bull; IBM</span>
+              <div class="flex items-center gap-1" style="color: var(--accent-2);">
+                <i class="fas fa-certificate text-[9px]"></i>
+                <span>BNSP &bull; CISCO</span>
               </div>
             </div>
           </div>
