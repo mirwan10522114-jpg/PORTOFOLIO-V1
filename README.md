@@ -1,16 +1,16 @@
 <div align="center">
 
-# ⚡ Mirwan Kholid — Information Systems & Full-Stack Developer Portfolio
+# ⚡ Mirwan Kholid — Full-Stack Web Developer & Data Analyst Portfolio
 
-[![Portfolio Website](https://img.shields.io/badge/Portfolio-Live%20Demo-f59e0b?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/mirwan10522114-jpg/PORTOFOLIO)
+[![Full-Stack Web Dev](https://img.shields.io/badge/Full--Stack%20Web%20Dev-Laravel%20%7C%20React%20%7C%20Next.js-f59e0b?style=for-the-badge&logo=laravel&logoColor=white)](https://github.com/mirwan10522114-jpg)
+[![BNSP Certified Data Analyst](https://img.shields.io/badge/BNSP%20Certified-Data%20Analyst%20(SKKNI)-10b981?style=for-the-badge&logo=checkmarx&logoColor=white)](https://lspinformatika.id)
 [![UNIKOM Alumni](https://img.shields.io/badge/Degree-S.SI%20(GPA%203.68)-06b6d4?style=for-the-badge&logo=academia&logoColor=white)](https://unikom.ac.id)
-[![BNSP Certified](https://img.shields.io/badge/BNSP-Associate%20Data%20Analyst-10b981?style=for-the-badge&logo=checkmarx&logoColor=white)](https://lspinformatika.id)
 [![Cisco Certified](https://img.shields.io/badge/Cisco-CCNA%20(2x%20Verified)-1ba0d7?style=for-the-badge&logo=cisco&logoColor=white)](https://netacad.com)
 [![GitHub](https://img.shields.io/badge/GitHub-mirwan10522114--jpg-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mirwan10522114-jpg)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mirwan--kholid-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mirwan-kholid-902038362/)
 
 <p align="center">
-  <strong>Engineering robust web systems, database architectures, and data-driven solutions that solve real-world operational bottlenecks.</strong>
+  <strong>Specializing in Full-Stack Web Development (Laravel, Next.js, React, PHP, MySQL) and Accredited Data Analytics (BNSP SKKNI, Python, Power BI, Advanced SQL).</strong>
 </p>
 
 <p align="center">
@@ -32,7 +32,11 @@
 
 Modern, high-performance personal portfolio website showcasing the engineering work, enterprise web systems, academic distinctions, and accredited credentials of **Mirwan Kholid, S.SI** — an Information Systems graduate from **Universitas Komputer Indonesia (UNIKOM)** (GPA: **3.68 / 4.00**).
 
-The portfolio features deep architectural breakdowns of **6 enterprise and government production systems**, interactive detail modals with uncropped 1024px user interface previews, a **multi-theme switcher** (Obsidian Dark, Clean Editorial Light, Cyberpunk High-Contrast), and an **interactive credential viewer** presenting formally verified government and industry certifications (BNSP, IBM SkillsBuild, Cisco CCNA).
+The portfolio highlights Mirwan's dual primary competencies:
+1. **Full-Stack Web Development**: Building scalable, resilient, and responsive web platforms with Laravel, Next.js, React, PHP, and MySQL.
+2. **Data Analytics**: Accredited Associate Data Analyst (**BNSP LSP Informatika**) skilled in data cleaning, exploratory data analysis (EDA), statistical modeling, Power BI dashboards, and advanced SQL querying.
+
+The website features deep architectural breakdowns of **6 enterprise and government production systems**, interactive detail modals with uncropped user interface previews, a **multi-theme switcher** (Obsidian Dark, Clean Editorial Light, Cyberpunk High-Contrast), and an **interactive credential viewer** presenting formally verified government and industry certifications (BNSP, IBM SkillsBuild, Cisco CCNA).
 
 ---
 
@@ -40,10 +44,12 @@ The portfolio features deep architectural breakdowns of **6 enterprise and gover
 
 - **Degree**: Bachelor of Information Systems (*Sarjana Sistem Informasi - S.SI*), Universitas Komputer Indonesia (UNIKOM)
 - **Academic Standing**: Cumulative GPA **3.68 / 4.00** (*High Distinction*)
-- **Core Competencies**: Full-Stack Web Development, Systems Analysis & Design (SAD), Relational Database Engineering (MySQL / 3NF), Data Analytics (BNSP Certified), RESTful API Development, Spatial Decision Analysis (GIS).
+- **Core Pillars**:
+  - 🌐 **Full-Stack Web Development**: Laravel, PHP, Next.js, React, JavaScript (ES6+), TypeScript, RESTful API integrations, Tailwind CSS, HTML5/CSS3.
+  - 📊 **Data Analytics & BI**: Certified Associate Data Analyst (BNSP SKKNI), Python (Pandas, NumPy), Data Cleaning & Preprocessing, Power BI, Tableau, Advanced SQL & Relational Modeling (3NF).
 - **Leadership**: Former Chairperson of SAPMA PP UNIKOM, Vice Chairperson of KIPAN Bandung Barat, Vice Chairperson of HIMA SI UNIKOM, and Head of Athlete Training at FODN Kota Bandung.
 - **Location**: Bandung Barat & Kota Bandung, Jawa Barat, Indonesia
-- **Availability**: Open to Full-Stack Developer, Systems Analyst, Backend Engineer, and Data Analyst roles.
+- **Availability**: Open to **Full-Stack Web Developer** and **Data Analyst** roles (Full-time, Contract, or Consulting).
 
 ---
 
