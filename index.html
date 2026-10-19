@@ -641,49 +641,49 @@ body.theme-anim *::after {
 .hero-portrait-wrap {
   position: relative;
   width: 100%;
-  max-width: 250px;
+  max-width: 290px;
 }
 @media (min-width: 1280px) {
   .hero-portrait-wrap {
-    max-width: 270px;
+    max-width: 315px;
   }
 }
 .hero-portrait-card {
   position: relative;
   background: var(--card);
   border: 1px solid var(--border-strong);
-  border-radius: 14px;
-  padding: 10px;
-  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.45), 0 0 20px -4px var(--glow);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.45), 0 0 24px -4px var(--glow);
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: visible;
 }
 .hero-portrait-card:hover {
   transform: translateY(-3px);
   border-color: var(--accent);
-  box-shadow: 0 22px 45px -10px rgba(0, 0, 0, 0.55), 0 0 28px -2px var(--glow);
+  box-shadow: 0 25px 55px -10px rgba(0, 0, 0, 0.55), 0 0 32px -2px var(--glow);
 }
 .hero-corner {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   pointer-events: none;
   z-index: 25;
   transition: all 0.3s ease;
 }
-.hero-corner-tl { top: 4px; left: 4px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); }
-.hero-corner-tr { top: 4px; right: 4px; border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); }
-.hero-corner-bl { bottom: 4px; left: 4px; border-bottom: 2px solid var(--accent); border-left: 2px solid var(--accent); }
-.hero-corner-br { bottom: 4px; right: 4px; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+.hero-corner-tl { top: 5px; left: 5px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+.hero-corner-tr { top: 5px; right: 5px; border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+.hero-corner-bl { bottom: 5px; left: 5px; border-bottom: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+.hero-corner-br { bottom: 5px; right: 5px; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); }
 .hero-portrait-card:hover .hero-corner {
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
 }
 .hero-portrait-img-box {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1.05;
-  border-radius: 10px;
+  aspect-ratio: 1 / 1.1;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg-elev-2);
@@ -700,11 +700,11 @@ body.theme-anim *::after {
 }
 .hero-ambient-glow {
   position: absolute;
-  inset: -8px;
-  border-radius: 20px;
-  background: radial-gradient(circle at 60% 40%, rgba(var(--accent-rgb), 0.18), rgba(var(--accent-2-rgb), 0.1) 50%, transparent 75%);
-  filter: blur(18px);
-  opacity: 0.7;
+  inset: -10px;
+  border-radius: 24px;
+  background: radial-gradient(circle at 60% 40%, rgba(var(--accent-rgb), 0.2), rgba(var(--accent-2-rgb), 0.12) 50%, transparent 75%);
+  filter: blur(20px);
+  opacity: 0.75;
   z-index: -1;
   pointer-events: none;
   transition: opacity 0.4s ease;
@@ -719,13 +719,13 @@ body.theme-anim *::after {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 999px;
-  padding: 4px 9px;
+  padding: 5px 11px;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   display: flex;
   align-items: center;
-  gap: 5px;
-  box-shadow: 0 6px 16px -3px rgba(0, 0, 0, 0.35);
+  gap: 6px;
+  box-shadow: 0 8px 20px -3px rgba(0, 0, 0, 0.35);
   z-index: 30;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--fg);
@@ -734,7 +734,7 @@ body.theme-anim *::after {
 .hero-floating-chip:hover {
   transform: translateY(-2px) scale(1.04);
   border-color: var(--accent);
-  box-shadow: 0 8px 20px -3px rgba(0, 0, 0, 0.45), 0 0 10px var(--glow);
+  box-shadow: 0 10px 24px -3px rgba(0, 0, 0, 0.45), 0 0 12px var(--glow);
 }
 
 @media (max-width: 768px) {
@@ -877,7 +877,7 @@ body.theme-anim *::after {
           <!-- Top-Right Floating Badge: UNIKOM Honors -->
           <div class="hero-floating-chip -top-3.5 right-3">
             <img src="assets/images/logo-unikom.png" alt="Logo UNIKOM" class="w-3.5 h-3.5 object-contain" />
-            <span><strong class="text-accent font-semibold">S.SI</strong> · UNIKOM</span>
+            <span><strong class="text-accent font-semibold">S.SI</strong> · UNIKOM (3.68)</span>
           </div>
 
           <!-- Bottom-Left Floating Badge: BNSP Certified -->
@@ -891,13 +891,13 @@ body.theme-anim *::after {
           <!-- Main Portrait Card -->
           <div class="hero-portrait-card">
             <!-- Terminal / HUD Window Header -->
-            <div class="flex items-center justify-between pb-2 mb-2 border-b font-mono text-[10px]" style="border-color: var(--border);">
+            <div class="flex items-center justify-between pb-2.5 mb-2.5 border-b font-mono text-[11px]" style="border-color: var(--border);">
               <div class="flex items-center gap-1.5">
                 <span class="flex h-1.5 w-1.5 relative">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background: var(--accent);"></span>
                   <span class="relative inline-flex rounded-full h-1.5 w-1.5" style="background: var(--accent);"></span>
                 </span>
-                <span class="font-semibold tracking-wider text-[10px]" style="color: var(--fg);">mirwan_kholid.s_si</span>
+                <span class="font-semibold tracking-wider text-[11px]" style="color: var(--fg);">mirwan_kholid.s_si</span>
               </div>
               <div class="flex items-center gap-1 text-[9px] uppercase tracking-widest px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-500 border border-amber-500/20 font-semibold">
                 <i class="fas fa-terminal text-[7px]"></i>
@@ -916,25 +916,25 @@ body.theme-anim *::after {
               <img src="assets/images/profile-mirwan.jpg" alt="Mirwan Kholid, S.SI — Full-Stack Web Developer & Data Analyst" class="hero-portrait-img" loading="eager" />
               
               <!-- Subtle vignette at bottom -->
-              <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none z-10"></div>
+              <div class="absolute inset-x-0 bottom-0 h-22 bg-gradient-to-t from-black/85 via-black/45 to-transparent pointer-events-none z-10"></div>
               
               <!-- Grid overlay (technical texture matching background grid) -->
               <div class="absolute inset-0 bg-grid opacity-15 pointer-events-none z-10"></div>
 
               <!-- Tech Crosshairs in image corners -->
-              <div class="absolute top-2 left-6 font-mono text-[8px] text-white/50 z-20 pointer-events-none select-none">+ 01</div>
-              <div class="absolute top-2 right-6 font-mono text-[8px] text-white/50 z-20 pointer-events-none select-none">[RAW]</div>
+              <div class="absolute top-2.5 left-7 font-mono text-[8px] text-white/50 z-20 pointer-events-none select-none">+ 01</div>
+              <div class="absolute top-2.5 right-7 font-mono text-[8px] text-white/50 z-20 pointer-events-none select-none">[RAW]</div>
 
               <!-- Bottom overlay badge inside image -->
-              <div class="absolute bottom-2 left-2 right-2 z-20 flex items-end justify-between font-mono text-[10px] text-white/95">
+              <div class="absolute bottom-2.5 left-2.5 right-2.5 z-20 flex items-end justify-between font-mono text-[10px] text-white/95">
                 <div>
-                  <div class="font-bold text-xs text-white tracking-wide flex items-center gap-1">
+                  <div class="font-bold text-sm text-white tracking-wide flex items-center gap-1.5">
                     <span>Mirwan Kholid</span>
-                    <i class="fas fa-check-circle text-emerald-400 text-[10px]" title="Verified Professional"></i>
+                    <i class="fas fa-check-circle text-emerald-400 text-xs" title="Verified Professional"></i>
                   </div>
-                  <div class="text-[9px] text-amber-400 font-mono tracking-wider">FULL-STACK &bull; DATA ANALYST</div>
+                  <div class="text-[10px] text-amber-400 font-mono tracking-wider font-semibold">FULL-STACK &bull; DATA ANALYST</div>
                 </div>
-                <div class="text-right text-[9px] text-cyan-300 font-mono">
+                <div class="text-right text-[10px] text-cyan-300 font-mono">
                   <div>Bandung Barat</div>
                   <div class="text-white/70">GPA 3.68</div>
                 </div>
@@ -942,10 +942,10 @@ body.theme-anim *::after {
             </div>
 
             <!-- Frame Footer Bar -->
-            <div class="pt-2 mt-2 border-t flex items-center justify-between font-mono text-[10px]" style="border-color: var(--border); color: var(--muted);">
+            <div class="pt-2.5 mt-2.5 border-t flex items-center justify-between font-mono text-[11px]" style="border-color: var(--border); color: var(--muted);">
               <div class="flex items-center gap-1">
                 <i class="fas fa-layer-group text-[9px]" style="color: var(--accent);"></i>
-                <span class="truncate max-w-[110px] sm:max-w-none">Laravel / Next / MySQL</span>
+                <span class="truncate max-w-[125px] sm:max-w-none">Laravel / Next / MySQL</span>
               </div>
               <div class="flex items-center gap-1" style="color: var(--accent-2);">
                 <i class="fas fa-certificate text-[9px]"></i>
