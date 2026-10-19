@@ -194,6 +194,7 @@ PORTOFOLIO/
 │       ├── logo-himasi.png                # Himpunan Mahasiswa Sistem Informasi UNIKOM emblem
 │       ├── logo-sapma.png                 # SAPMA PP Komisariat UNIKOM emblem
 │       ├── logo-kipan.png                 # KIPAN Kab. Bandung Barat official emblem
+│       ├── logo-orado.png                 # Federasi Olahraga Domino Nasional (ORADO) emblem
 │       ├── project-wastebank.png          # Waste Bank platform preview screenshot
 │       ├── project-petadik.png            # PETADIK Disdik KBB UI preview screenshot
 │       ├── project-kipan.png              # SIM KIPAN member portal preview
