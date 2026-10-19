@@ -941,11 +941,12 @@
       height: 100%;
       object-fit: cover;
       object-position: center 10%;
+      transform: scale(1.06) translateX(-9px);
       transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .hero-portrait-card:hover .hero-portrait-img {
-      transform: scale(1.04);
+      transform: scale(1.10) translateX(-9px);
     }
 
     .hero-ambient-glow {
@@ -1277,8 +1278,8 @@
         </div>
 
         <!-- Right Column: Profile Portrait with Matching Elements & Cyber HUD Framing -->
-        <div class="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end lg:pt-3">
-          <div class="hero-portrait-wrap">
+        <div class="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-center lg:pt-3">
+          <div class="hero-portrait-wrap lg:-translate-x-6 xl:-translate-x-10 transition-transform duration-300">
             <!-- Ambient Glow Background -->
             <div class="hero-ambient-glow"></div>
 
