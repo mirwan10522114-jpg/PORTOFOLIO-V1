@@ -7,7 +7,7 @@
 [![UNIKOM Alumni](https://img.shields.io/badge/Degree-S.Kom.%20(GPA%203.68)-06b6d4?style=for-the-badge&logo=academia&logoColor=white)](https://unikom.ac.id)
 [![Cisco Certified](https://img.shields.io/badge/Cisco-CCNA%20(2x%20Verified)-1ba0d7?style=for-the-badge&logo=cisco&logoColor=white)](https://netacad.com)
 [![GitHub](https://img.shields.io/badge/GitHub-mirwan10522114--jpg-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mirwan10522114-jpg)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-mirwan--kholid-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mirwan-kholid-902038362/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-mirwan--kholid-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mirwan-kholid/)
 
 <p align="center">
   <strong>Specializing in Full-Stack Web Development (Laravel, Next.js, React, PHP, MySQL) and Accredited Data Analytics (BNSP SKKNI, Python, Power BI, Advanced SQL).</strong>
@@ -274,7 +274,7 @@ If you would like to discuss full-time opportunities, engineering projects, or c
 
 - 📧 **Email**: [mirwankholid06@gmail.com](mailto:mirwankholid06@gmail.com)
 - 💬 **WhatsApp**: [+62 812-1154-7844](https://wa.me/6281211547844)
-- 💼 **LinkedIn**: [linkedin.com/in/mirwan-kholid-902038362](https://linkedin.com/in/mirwan-kholid-902038362/)
+- 💼 **LinkedIn**: [linkedin.com/in/mirwan-kholid](https://www.linkedin.com/in/mirwan-kholid/)
 - 🐙 **GitHub**: [github.com/mirwan10522114-jpg](https://github.com/mirwan10522114-jpg)
 - 📍 **Location**: Bandung Barat, Jawa Barat, Indonesia
 
